@@ -1,0 +1,39 @@
+Basic command line:
+
+relative path: points to a location in the filesystem based on the current directory
+absolute path: points to a location in the filesystem regardless of the current 
+
+~: refers to the home directory
+/: refers to the root directory
+	- upmost directory
+..: refers to the previous directory
+.: refers to the current directory
+
+touch: create a file
+ls: list the content of a directory(folder)
+	-a (flag) : to list hidden items
+		- hidden items are preceded with a . ie: .git
+cd: change directory - use tab to autocomplete
+pwd: list the absolute path of the current directory
+mkdir: create a directory
+mv: move element (file/directory)
+	- mv file targetLocation/[new-filename if desired]
+rm: delete file
+	-rf for directory
+rmdir: delete directory
+cat: displays content
+vim/nano: text editors to create/edit files
+
+Resource for more information:
+https://cheat.sh/
+
+Git
+
+	- DVCS - Distributed Version Control System
+		- VCS - Version Control System
+			- tracks history of changes
+				- what
+				- who
+				- when
+			- Allow for full access locally
+				- self-contained history
