@@ -27,13 +27,3 @@ vim/nano: text editors to create/edit files
 Resource for more information:
 https://cheat.sh/
 
-Git
-
-	- DVCS - Distributed Version Control System
-		- VCS - Version Control System
-			- tracks history of changes
-				- what
-				- who
-				- when
-			- Allow for full access locally
-				- self-contained history
