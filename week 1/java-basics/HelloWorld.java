@@ -52,5 +52,33 @@ public class HelloWorld{
 		}
 		String s3 = new String("Hi");
 		System.out.println("is s == s3: " + (s == s3));   
+	
+		char[] letters = s2.toCharArray();
+		
+		for(int i = 0; i < 3; i++){
+			System.out.println("hello!");
+		}
+
+		for(int i = 0; i < letters.length; i++){
+			System.out.println("The letter printed out is: " + letters[i]);
+		}
+		
+		for(char l : letters){
+			System.out.println("The letter printed out is: " + l);
+		}
+		
+		boolean condition = true;
+
+		while(in < 10 && !condition){
+			System.out.println(in);
+			in++;
+		}
+
+		do{
+			System.out.println("hi");
+		}while(!condition);
+		
 	}
 }	
+
+

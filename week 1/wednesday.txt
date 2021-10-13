@@ -65,11 +65,66 @@ Control flow statements
 	- if/else if/else
 		- determine whether a block of code executes based on a condition
 	- for 
-		
+		- best used when number of iteration is known
+		- for( initialization; termination condition; increment){
+			statements to be ran
+		}		
 	- while
+		- best used when the number of iteration is unknown
+		- while(condition){
+			statements to be ran while the condition remains true
+		}
 	- do while
+		- while loop that executes at least once regardless of the condition
 	- switch
+		 - switch(expression to be evaluated){
+			case 1: 
+				[statements];
+				break;
+			case 2:
+				[statements];
+				break;
+			default:
+				[statements];
+				break;
+		}
+Truth tables
+	- && => and
+	- || => or
+	- True && True => T
+	- T && F => F
+	- F && F => F
 
+	- T || T => T
+	- T || F => T
+	- F || F => F
 = vs ==
 	- =: assigns a value to a variable
 	- ==: compares the value of primitive datatypes
+
+Methods
+	- blocks of reusable logic that can take in arguments and can have a return type
+		- int... any datatypes
+		- void: no return types
+
+Create a Calculator class
+	- add
+		public int add(int a, int b)
+	- subtract
+		public int subtract(int a, int b)
+	- multiply
+		public double multiply(double a, double b)
+	- remainder
+		public int remainder(int a, int b)
+	- weekday
+		public String weekday(String weekday)
+			- return a different string based on the weekday passed in, if it's not a week day return a default message
+
+1. countdown: make sure that argument is positive,
+	then count down from that number to 0. if
+	argument is not positive, it should print
+	"input must be positive or 0."
+	public void countdown(int startValue) { }
+
+2. greeting: takes in a name, should print a greeting
+	using the name.
