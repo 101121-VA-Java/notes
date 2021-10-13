@@ -1,0 +1,75 @@
+Full Stack architecture:
+	- refers to an architecture to design a web application
+		- client/server
+			- client: who/what is making the request
+			- server: who/what is handling the request and returning a response
+		- front end
+		- back end
+		- database
+		- Communication between the different components
+
+Java
+	- Java is a mature language
+		- lot of documentation 
+		- supported/ backed by Oracle
+	- Highlevel programming language
+	- OOP language
+		- also supports other programming paradigms (ie: functional)
+	- Compiled language
+		- provides compile time error checking
+	- Strictly typed language
+		- variable needs to declared with a type
+	- WORA/ Platform independence
+		- via the JVM
+	- Multithreaded language
+	- Automatic memory management
+		- Garbage collector
+
+JDK/JRE/JVM
+	- Java Development Kit
+		- Contains the JVM and the JRE
+		- Contains the compiler (javac) and other tools for development
+		- Provide an environment to develop and execute a Java program
+	- Java Runtime Environment
+		- Includes core libraries of Java
+		- Includes the JVM
+		- ALL THAT'S NEEDED TO RUN an application
+	- Java Virtual Machine
+		- takes the compiled code and executes it starting from the main method
+	- Compilation process in Java
+		- Highlevel Java code (.java) => Compilation Step (javac) => Bytecode (intermediary language) (.class) 
+		- then interpreted by the JVM
+
+Datatypes
+	- primitive
+		- boolean
+			- true/false: size is jvm dependent
+		- character
+			- 'A': 2bytes
+		- Whole numbers
+			- byte: 1byte
+			- short: 2bytes
+			- int: 4bytes // default
+			- long: 8 bytes
+		- Floating points, accomodate for decimals
+			- float: 4 bytes
+			- double: 8 bytes // default
+	- reference
+
+	- Strings
+		- objects
+		- Arrays of characters
+
+Control flow statements
+	- controls the flow of execution of an application
+	- if/else if/else
+		- determine whether a block of code executes based on a condition
+	- for 
+		
+	- while
+	- do while
+	- switch
+
+= vs ==
+	- =: assigns a value to a variable
+	- ==: compares the value of primitive datatypes
