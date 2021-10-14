@@ -81,3 +81,36 @@ Conditional Operators:
 Ternary operator
 	- shorthand version of an if statement
 	- [expression to be evaluated] ? [ if True ] : [if False];
+
+Packages
+	- group items based on what they do/ provide logical structure
+		- separation of concerns:
+			- a package to hold all models/entities
+			- a package to hold all classes related to data persistence
+			- a package to hold all classes related to business logic (services)
+			- a package to hold all classes to interact with the web 
+	- are declared at the top of the class
+		- follows the reverse URL format/ reverse domain name
+		- package com.revature.models;
+	- folder structure
+		- allows for resolution of naming conflicts
+		- define access (access modifiers)
+			- how classes can access one another
+
+Class
+	- Blueprint for object, defines states and behaviors
+		- states refer to field, properties
+		- behaviors refer to methods
+		- objects can be instantiated using the new keyword which calls the constructor
+	- Constructors
+		- special method that has no return type and are used to create an instance of a class
+		- called using the "new" keyword
+		- default constructor: a no args-constructor provided by the compiler if NO OTHER CONSTRUCTOR IS PROVIDED (No args or parameterized)
+		- no-args constructor: constructor with no parameter
+		- parameterized/overloaded constructor: constructor with one or more parameters
+
+Exercise:
+	- create model with at least 2 states and 1 behavior.
+	- create a no args constructor and a parameterized constructor
+	- test it out in a separate file with a main method
+	- push it to github
