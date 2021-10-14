@@ -1,0 +1,83 @@
+Review:
+	- Java
+		- Mature language, a lot of support for it
+			- Oracle backed
+		- Multiple programming paradigm
+			- OOP
+			- functional
+		- OS independent
+			- JVM
+		- Multithreaded
+		- Automatic memory management
+		- compiled language
+		- strictly typed language
+	
+	- JDK/JRE/JVM
+		- JDK
+			- Java Development Kit
+				- Tools to create java application
+				- Compiler
+				- Java Runtime Environment
+					- Everything that is needed to run an application
+					- Java Virtual Machine
+					- java core libraries
+	
+	- Variables
+		- primitives (stored in stack)
+			- whole numbers
+				- byte, short, int, long
+			- floating points
+				- float, double
+			- boolean
+			- char
+		- reference types (stored in stack): refers to an object in heap
+
+	- String
+		- immutable array of characters
+			- meaning cannot be changed, when a value is reassigned, a new String is created (if needed)
+		- denoted by quotation marks: "this is a string"
+			- String s = "Hello";
+				- leverages the String pool
+					- a place in the heap for strings to be reused
+			- String s1 = new String("Hello"); 
+				- does not leverage the String pool and creates a new String everytime
+
+	- Methods
+		- reusable block of code that can take in arguments and return something
+			- void: method does not return anything
+			- return value;
+		- Methods should focus on doing one thing well
+		- main method
+			- entrypoint for the jvm
+	
+	- Control flow statements
+		- if/else if/else
+		- for
+		- while
+		- do while
+		- switch
+
+
+Naming Conventions in Java
+	- PascalCase for ClassName/InterfaceName
+	- camelCase for methodName/variableName
+	- reverse url for package declaration: com.revature.tranhuu
+	- can't be reserved keywords
+
+Arrays
+	- groups of elements of the same datatype, can be primitives or objects
+	- Arrays are contiguous blocks in memory and as such the size of an array must be specified when initialized
+	- Elements in an array can be selected using their index, index starts at 0
+		- arrays have a property called "length"
+			- represents the length of an array
+			- .length
+	- boolean[] bools = {true, false, true}; 
+	- boolean[] bools = new boolean[3];
+
+Conditional Operators:
+	- &, | - bitwise operator: evaluates both sides
+	- &&, || - short circuit operators: evaluates one side if enough
+
+Ternary operator
+	- shorthand version of an if statement
+	- [expression to be evaluated] ? [ if True ] : [if False];
