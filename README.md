@@ -14,3 +14,6 @@
 
 ---
 
+10/14
+- Watch other batch showcase(3pm)
+
