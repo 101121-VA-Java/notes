@@ -1,0 +1,18 @@
+scope of a variable
+	- do not confuse scopes with access (ie: access modifiers)
+	- lifetime of a variable
+	- loop/block scope
+		- variable only exists during the execution of a block
+			- a variable declared within a loop/conditional statement
+				- { }
+	- method scope
+		- variable only exists withn the scope of a method
+			- includes parameters and variables declared within that scope
+
+	- instance/object scope
+		- variable lives throughout the lifetime of an object
+			- begins when the object is instantiated up to the point the object is garbage collected
+	
+	- static/class scope
+		- variables live throughout the lifetime of an application
+			- associated with a class

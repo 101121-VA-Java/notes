@@ -17,5 +17,7 @@ public class Driver{
 
         System.out.println(dean.eat("rice"));
         michael.sleep();
+
+        String s = "hello";
     }
 }
