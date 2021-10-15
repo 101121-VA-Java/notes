@@ -1,0 +1,49 @@
+# Questions
+## Java
+- What is Java
+- What are the benefits of Java
+- What is the difference betwwen the JRE, JDK, and JVM
+- What happens during the compilation process
+- What is a constructor
+- What are the primitive datatypes
+- What is a no args constructor
+- What is the default constructor
+- What are the scopes of a variable in java
+- What are the different control statements and how are they different
+- How do you create an array in java
+- What are packages and imports
+- What is static
+- What are Strings
+- What are some string methods
+- What is the difference between the stack and the heap
+- What is the difference between == and .equals()?
+
+## Git
+- What is version control?
+- What is the difference between git and GitHub?
+- List the git commands you know and what they do
+- How would you prevent a file from being tracked by git?
+- What is a branch? What are some common branching strategies?
+- What is a merge conflict? How do you prevent these and resolve if it happens?
+- What is a GitHub pull request?
+- What is the git workflow for editing code and saving changes?
+- What is a commit?
+- How would you go back in your commit history if you make a mistake?
+- What is a Github issue?
+
+## Unix
+- Where are the root and home directories located? How to get to each?
+- What Linux command would you use to:
+	- Navigate your file hierarchy on the command line?
+	- List files? What about hidden files?
+	- Edit a file from the terminal
+- What is a package manager? What are some common Linux package managers?
+
+## AWS
+- How would you describe AWS? What is “the cloud” or “cloud computing” and why is it so popular now?
+- What’s the difference between a Region and an Availability Zone (AZ)?
+- How are you charged for using AWS services?
+- Explain the following AWS services:
+	- EC2
+	- EBS
+	- AMI
