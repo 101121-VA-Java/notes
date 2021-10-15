@@ -16,3 +16,45 @@ scope of a variable
 	- static/class scope
 		- variables live throughout the lifetime of an application
 			- associated with a class
+
+AWS
+	- Amazon Web Services
+	- Offers cloud solutions to customer needs
+	- Why/What is the cloud?
+		- cost-saving
+			- not having to manage servers on-premise
+				- staff
+				- maintaining/setting up/upgrading/...
+		- Infrastructure
+		- Scalability
+			- Auto-scaling
+				- "Pay for what you use"
+		- Durability
+	- Regions and Availability zones
+		- Regions
+			- groupings of AWS zones world-wide
+		- Availability zones
+			- datacenters containing the infrastructure
+
+	- Services
+		- EC2
+			- Elastic Cloud Compute
+			- Virtual machine on the cloud
+			- Connecting to EC2
+				- ssh -i path/to/file.pem ec2-user@[public-dns]
+
+		- AMI
+			- Amazon Machine Image
+			- Template that is needed to launch an instance of a virtual server
+			- Includes OS
+				- We're going to be using Amazon Linux 2
+		- EBS
+			- Elastic Block Storage
+			- Block storage that is associated to EC2
+			- Virtual hard drive
+			- Backed up in the Availability Zone
+
+		- Security Groups
+			- Details what traffic is allowed in and out
+			- Traffic filter
+
