@@ -35,13 +35,13 @@ public class ControlFlow{
         System.out.println("Expected value:");
         System.out.println("3 4 5");
         System.out.println("Actual:");
-        for(int i : transformIntArr(intArr)){
+        for(int i : orderArr(intArr)){
             System.out.print(i + " ");
         } 
         System.out.println("\nExpected value:");
         System.out.println("1 3 5 6");
         System.out.println("Actual:");
-        for(int i : transformIntArr(intArr1)){
+        for(int i : orderArr(intArr1)){
             System.out.print(i + " ");
         } 
 
