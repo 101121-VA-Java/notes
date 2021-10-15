@@ -21,3 +21,11 @@
         - What did they actually do?
     - If I was a manager from another company, what would I be curious about? 
 
+---
+
+10/15
+    - Meeting (12pm)
+        - link to be shared
+            - lunch afterwards
+            - meet back in batch zoom at 2pm
+
