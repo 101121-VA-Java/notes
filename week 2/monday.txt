@@ -1,0 +1,35 @@
+Week 2, Monday - 
+	- QC
+	- Assessment - https://coding.revature.com/AuthenticateKey?id=e495e49d04
+	- 1-o-1
+		- groups of 3:
+			- Malolan, Peter, Andrew
+			- Kendrick, Alex, Dean
+			- Albert, Alex, Andre
+			- Tevon, Sam, Patience
+			- Brayden, Hannah, Gerardo
+			- Bruno, Davey, Kim
+			- Bezza, David, Jeremy
+
+
+Meanwhile:
+	- make sure Eclipse by tomorrow
+	- create a Hackerrank account
+	- review RevPro notes
+	- more java-practice:
+		- https://classroom.github.com/a/re6_oklK
+		- setup:
+			- clone the created directory on your device
+			- open Eclipse
+			- File -> Open Project from File System
+				- Next to Import source, click Directory...
+				- Select the cloned folder
+					- in the Folder section, it should show a checkmark
+					- Click Finish at the bottom
+			- At the bottom right, you'll see a progress bar while the project is set up
+			- In the Project Explorer tab, navigate to EvaluationService.java
+				- Implement the methods!
+			- As you're progressing through the assignment, make sure to push your progress to GitHub
+		- checking methods:
+			-  right click on the project name (ie: java-core-your-name)
+				- Select Run As -> JUnit Test
