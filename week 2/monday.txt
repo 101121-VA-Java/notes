@@ -5,7 +5,7 @@ Week 2, Monday -
 		- groups of 3:
 			- Malolan, Peter, Andrew
 			- Kendrick, Alex, Dean
-			- Albert, Alex, Andre
+			- Albert, Tricia, Andre
 			- Tevon, Sam, Patience
 			- Brayden, Hannah, Gerardo
 			- Bruno, Davey, Kim
@@ -33,7 +33,6 @@ Meanwhile:
 		- checking methods:
 			-  right click on the project name (ie: java-core-your-name)
 				- Select Run As -> JUnit Test
-
 Creating new project in Eclipse:
 	- File -> New -> Maven Project
 	- check create simple project and specify the location you want to create your project
