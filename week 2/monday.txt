@@ -33,3 +33,16 @@ Meanwhile:
 		- checking methods:
 			-  right click on the project name (ie: java-core-your-name)
 				- Select Run As -> JUnit Test
+
+Creating new project in Eclipse:
+	- File -> New -> Maven Project
+	- check create simple project and specify the location you want to create your project
+	- Click Next
+	- Specify the group id (ie: com.revature)
+	- Specify the artifact id (ie: name of your project)
+
+	- in pom.xml add: (nested within the project tag)
+  <properties>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
