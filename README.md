@@ -24,8 +24,14 @@
 ---
 
 10/15
-    - Meeting (12pm)
-        - link to be shared
-            - lunch afterwards
-            - meet back in batch zoom at 2pm
-
+- Meeting (12pm)
+    - link to be shared
+    - lunch afterwards
+    - meet back in batch zoom at 2pm
+            
+---       
+10/19
+- Kevin meetings
+    - 12:30pm ET
+    - 5:30pm ET
+    
