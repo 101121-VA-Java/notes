@@ -1,0 +1,50 @@
+Java resources:
+	- https://docs.oracle.com/javase/tutorial/java/index.html
+	- https://www.tutorialspoint.com/java/index.htm
+	- https://docs.oracle.com/javase/8/docs/api/index.html
+
+Groups: (Come up with a team name)
+Tricia
+Hannah
+Bezza
+Andrew
+
+Jeremy
+Kendrick
+Brayden
+Gerardo
+
+Sam
+Patience
+Bruno
+Alex
+
+Albert
+Tevon
+Dean
+Andre
+
+Kim
+Davey
+David
+Peter
+Malolan
+
+String
+	- reference type, array of characters
+	- String is a class, the strings that we're working with are instances of that class
+	- immutable - cannot be changed, value of a string remains the same (final keyword)
+	- Strings are usually stored in the String pool (in the heap)
+		- where all strings instantiated literally (ie: String s = "Hello";) are stored
+		- this allows Java to reuse the save String for repeated valued strings
+	- String newS = new String("Hello"); //Creates the string in the heap itself instead of in the String Pool
+	- String s = "Hello"; //Creates the string in the String Pool, can be reused
+	- interning
+		- .intern() method - checks if a String is already in the String Pool and if it exists returns a reference to it,
+			else creates that string and returns that reference
+
+StringBuilder/ StringBuffer
+	- mutable alternatives to Strings with methods that allow for manipulation
+		- append, replace...
+	- StringBuilder is not thread-safe - faster
+	- StringBuffer is thread-safe - slower
