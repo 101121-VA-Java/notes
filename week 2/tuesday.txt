@@ -56,3 +56,56 @@ Scanner
 	- can parse through inputs for different types, read an entire line... etc.
 	- Recommendation: use one scanner per input stream 
 	- Good practice: close resources when no longer needed
+
+OOP
+	- Programming paradigm which relies on classes and objects to model real world objects
+	- 4 pillars of OOP
+		- Encapsulation
+		- Inheritance
+		- Polymorphism
+		- Abstraction
+
+Class
+	- Blueprint for an object, define their states and behaviors
+	- Members of a class
+		- variables and methods of that class
+			- Object/Instance
+				- Instance variables
+				- Instance methods
+			- Class/Doesn't belong to a specific object
+				- Static variables
+				- Static methods
+
+Object
+	- Instance of a class
+		- can be created using the "new" keyword
+			- ClassName varName = new ClassName();// invokes the no-args constructor for ClassName
+			- ClassName varName = new ClassName(someVar);// invokes the parameterized constructor for ClassName
+	- Beware of the Object class
+		- Parent of all classes
+			- contains methods such:
+				- toString() - override to return a String representation of an object
+				- equals(...) - override to actually compare the fields of the instances
+
+Encapsulation
+	- refers to the ability for an object to protect its states and its behaviors
+	- can be achieved by defining accessibility of classmembers using access modifiers
+		- setting variables to private
+	- using setters and getters to retrieve/change the states of an object
+
+Access modifiers
+	- specify which classes have access to a class and its members
+		- DO NOT CONFUSE WITH SCOPES
+		- public - least restrictive, all the classes within the application have access
+		- protected - all of the classes within the package and all of the sub/child classes have access
+		- "default"/none (none is defined, if left blank) - all of the classes within the package have access
+			- NOTE: THE DEFAULT KEYWORD IS USED FOR SOMETHING ELSE 
+		- private - the most restrictive, only the class itself has access
+
+Create Task.class
+	- String name
+	- LocalDate dueDate
+	- encapsulate the class
+	- create setter and getter
+		- manually write at least one of them
+	- give a toString() and a .equals() method

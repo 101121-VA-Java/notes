@@ -8,24 +8,25 @@ public class ScannerDriver {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Hello World!");
-		System.out.println("What's your name?");
-		
-		String name = sc.nextLine();
-		
-		System.out.println("Hello " + name);
-		System.out.println("Pick a number:");
-		
-		int num = sc.nextInt();
-		sc.nextLine(); // this sc.nextLine() flushes/grabs the leftovers from the previous input capture
+//		System.out.println("Hello World!");
+//		System.out.println("What's your name?");
+//		
+//		String name = sc.nextLine();
+//		
+//		System.out.println("Hello " + name);
+//		System.out.println("Pick a number:");
+//		
+//		int num = sc.nextInt();
+//		sc.nextLine(); // this sc.nextLine() flushes/grabs the leftovers from the previous input capture
 //		String number = sc.nextLine();
 		// some validation
 //		int num = Integer.parseInt(number);
 		
-		System.out.println("You picked " + num);
+//		System.out.println("You picked " + num);
+//		
+//		ScannerDriver.loginScreen();
 		
-		ScannerDriver.loginScreen();
-		
+		ScannerDriver.menu();
 		// Please close your resources people
 		sc.close();
 		
@@ -50,6 +51,34 @@ public class ScannerDriver {
 			System.out.println("You're logged in.");
 		} else {
 			System.out.println("Not quite.");
+		}
+	}
+	
+	public static void menu() {
+		boolean run = true;
+		while(run) {
+			System.out.println("Please select an option:\n"
+								+ "1: to retrieve a random number\n"
+								+ "2: to reverse a word\n"
+								+ "3: to exit the program");
+			String input = sc.nextLine();
+			switch(input) {
+			case "1": 
+				System.out.println("Here's a random number: " + Math.round(Math.random() * 100));
+				break;
+			case "2":
+				System.out.println("Please enter a word:");
+				StringBuffer sb = new StringBuffer(sc.nextLine());
+				System.out.println("Here is your reversed word: " + sb.reverse());
+				break;
+			case "3":
+				run = false;
+				System.out.println("Goodbye.");
+				break;
+			default:
+				System.out.println("Invalid option.");
+			}
+			
 		}
 	}
 }
