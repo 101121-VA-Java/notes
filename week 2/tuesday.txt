@@ -48,3 +48,11 @@ StringBuilder/ StringBuffer
 		- append, replace...
 	- StringBuilder is not thread-safe - faster
 	- StringBuffer is thread-safe - slower
+
+Scanner
+	- https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html
+	- Class in java that can be used to "scan" through several things
+		- files, console inputs, input streams
+	- can parse through inputs for different types, read an entire line... etc.
+	- Recommendation: use one scanner per input stream 
+	- Good practice: close resources when no longer needed

@@ -60,7 +60,11 @@ public class StringDriver {
 	 * and return that newly created string.
 	 */
 	public String removeEveryOtherLetter(String s) {
-		return null;
+		StringBuilder str = new StringBuilder();
+		for(int i = 0; i < s.length(); i+=2) {
+				str.append(s.charAt(i));
+		}
+		return str.toString();
 	}
 
 	/*
