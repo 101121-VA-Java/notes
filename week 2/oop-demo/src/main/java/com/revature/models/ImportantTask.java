@@ -2,12 +2,13 @@ package com.revature.models;
 
 import java.time.LocalDate;
 
-public class ImportantTask extends Task{
+public class ImportantTask extends Task {
 
 	
 	public ImportantTask() {
 		super();
 		// TODO Auto-generated constructor stub
+		LocalDate.now();
 	}
 
 	public ImportantTask(String name, LocalDate dueDate) {
