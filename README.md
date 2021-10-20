@@ -29,9 +29,17 @@
     - lunch afterwards
     - meet back in batch zoom at 2pm
             
----       
+---  
+
 10/19
 - Kevin meetings
     - 12:30pm ET
     - 5:30pm ET
+
+---  
+     
+10/20
+- Kevin meetings
+    - 2:00pm-2:45pm ET 
+
     

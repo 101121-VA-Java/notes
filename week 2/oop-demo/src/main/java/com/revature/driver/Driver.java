@@ -1,5 +1,9 @@
 package com.revature.driver;
 
+import java.time.LocalDate;
+
+import com.revature.models.ImportantTask;
+import com.revature.models.Task;
 import com.revature.models.User;
 
 public class Driver {
@@ -35,6 +39,22 @@ public class Driver {
 		System.out.println(k);
 		
 		System.out.println("Is k.equals(u)? " + k.equals(u));
+		
+		Task t1 = new Task("Laundry", LocalDate.parse("2021-10-20"));
+		
+		System.out.println(t1);
+		
+//		Task[] taskArr = {t1 , null, null};
+		
+		u.setTask(t1);
+		
+		System.out.println(u);
+		
+		ImportantTask it = new ImportantTask("Quiz", LocalDate.now());
+		
+		it.stress();
+		
+		System.out.println(it);
 	}
 
 }
