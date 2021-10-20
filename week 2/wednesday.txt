@@ -10,3 +10,32 @@ Inheritance
 		- this vs super
 		- this - refers to the current instance
 		- super - refers to the parent
+	- Java does not support multiple inheritance
+		- diamond problem
+
+Polymorphism
+	- refers to the ability of objects and methods to adapt their behaviors in different contexts
+		- can occur at compile time or at runtime
+	- method overloading
+		- HAPPENS WITHIN THE SAME CLASS
+		- creating multiple methods in the same class with the same method name
+			 but with different number and/or type(s) of parameters
+		- can change the return type as well
+		- compile time/static polymorphism
+	- method overriding
+		- write a method in a subclass with the same method signature as in the parent class 
+			but with a different implementation
+		- ie: overriding the toString() method to be relevant to the subclass
+		- can add @Override
+		- runtime polymorphism
+	- covariance return types
+		- when Overriding a method, there is an option to change the return type
+			- the new return type would have to be a child/subtype of the original type
+	- upcasting/downcasting
+		- upcasting refers to instantiating/assigin a child by declaring its parent's reference type
+			- Task t = new BoringTask();
+			- this restricts the available methods to the methods declared in the parent class
+				however when a method is called, it calls the child's implementation
+		- downcasting refers to instiating/ assigning an object by declaring its child class as a reference type
+			- BoringTask bt = (BoringTask) new Task();
+			- leads to issue, please avoid doing that

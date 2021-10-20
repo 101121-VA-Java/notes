@@ -74,4 +74,14 @@ public class Task {
 	public String toString() {
 		return "Task [name=" + name + ", dueDate=" + dueDate + "]";
 	}
+	
+	public Task getATask() {
+		return new Task();
+	}
+	/*
+	 * public class Object{
+	 * 	public String toString(){
+	 * 		return //memory address; 
+	 * }
+	 */
 }
