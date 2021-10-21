@@ -38,6 +38,7 @@ public class OopService {
 		System.out.println(k);
 
 		System.out.println("Is k.equals(u)? " + k.equals(u));
+		
 	}
 
 	public void doInheritance() {

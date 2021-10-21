@@ -42,4 +42,16 @@
 - Kevin meetings
     - 2:00pm-2:45pm ET 
 
+---  
+     
+10/21
+- Node showcase (10:30am)
+    - https://revature.zoom.us/j/99792103255?pwd=aGdZMExNaFRFb0VnMUNWNXhHZ211Zz09
+    - join back our batch's link afterwards
+
+---  
+     
+10/22
+-  Training week 1 wrap up session (12:00pm)
+
     
