@@ -43,3 +43,84 @@ Abstraction
 					- any interface
 			- In java 8 the "default" keyword was introduced
 				- to provide default implementation to methods in interfaces in needed
+
+non-access modifiers
+	- abstract
+	- default
+	- static
+		- associated with a class rather than with an instance
+			- call the method/property using the classname instead of an instance
+		- in front of a method
+		- in front of a field
+	- final
+		- in front of a class
+			- [access mod] final class [ClassName]{}
+			- the class cannot be extended
+		- in front of a field
+			- [access mod] final [varType] [varName];
+			- indicates that a variable/field cannot reassigned once initialized
+		- in front of a method
+			- [access mod] final [returnType] [methodName]([params]){}
+			- indicates that the method cannot be overriden
+				- makes sure that all subclasses/children classes keep that implementation
+	- synchronized
+		- has to do with threads
+		- only one thread can access a resource at a time
+
+Exception
+	- represents a condition that prevents a method from completing successfully
+	- an object created from the Exception class and its subclasses
+		- inherits from the Throwable class
+	- Error vs Exception
+		- Error
+			- extends from the Throwable class
+			- identifies internal errors that cannot be recovered from
+				- StackOverflowError, NoClassDefFoundError
+			- bad practice to try to handle those
+		- Exception
+			- divided into 2 types of exceptions
+				- Checked/Compile time exceptions
+					- "compiler-time exceptions", cannot compile the code until handled
+					- Exception and its subclasses EXCEPT RuntimeException and its subclasses
+					- 
+				- Unchecked/Runtime exceptions
+					- arises from coding errors/ can usually be prevented using some kind of validation
+						- ie: ArrayIndexOutOfBoundsException, Arithmetic Exception...
+					- not checked by the compiler
+					- HAS TO BE a RuntimeException or a children of that class
+		- IMPORTANT NOTE:
+			- ALL EXCEPTIONS ARE THROWN/OCCUR AT RUNTIME
+			- Compile time exception require exception handling logic at compile time
+	- Exception Handling
+		- Try block
+			- used to encapsulate any statements that may throw an exception
+		- Catch block 
+			- used to provide an exception handling behavior
+				- specific logic/behavior to be executed if an exception of a certain type is caught
+				- catch (ExceptionType1 | ExceptionType2 e){
+					// behavior to handle
+				} catch (Exception e){
+					// behavior to handle any exception
+				}
+					- can catch multiple types in the same block if siblings on the hierarchy
+					- have multiple catch blocks, from most specific to least specific exception type
+						- otherwise the most generic exception will catch all
+		- finally block
+			- executes regardless of the outcome
+				- whether an exception is thrown or not
+			- the way to skip a finally block is by using
+				- System.exit(0);
+			- usually used to free up resources
+		- try with resources
+			- allows a resource to be closed without requiring a finally block
+			- resource must implement the AutoCloseable interface
+		- throws
+			- use in the method signature "throws [ExceptionType]"
+			- if there is not enough info to handle an exception properly at the time it's thrown
+				- let Java know that the exception will be handled by the calling method
+	- Throwing Exception
+		- "throw new [ExceptionType]();"
+	- Custom Exception
+		- can create a custom exception in java by extending Exception or its subclasses
+			- to create a runtime/unchecked exception, extend from RuntimeException or a children of that class
+			- to create a compiletime/checked exception, extend from Exception and its subclasses EXCEPT RuntimeException and its subclasses
