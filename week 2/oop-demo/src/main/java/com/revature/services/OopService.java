@@ -2,6 +2,7 @@ package com.revature.services;
 
 import java.time.LocalDate;
 
+import com.revature.interfaces.Doable;
 import com.revature.models.BoringTask;
 import com.revature.models.ImportantTask;
 import com.revature.models.Task;
@@ -43,13 +44,13 @@ public class OopService {
 
 	public void doInheritance() {
 		User u = new User();
-		Task t1 = new Task("Laundry", LocalDate.parse("2021-10-20"));
-
-		System.out.println(t1);
+//		Task t1 = new Task("Laundry", LocalDate.parse("2021-10-20"));
+//
+//		System.out.println(t1);
 
 //		Task[] taskArr = {t1 , null, null};
 
-		u.setTask(t1);
+//		u.setTask(t1);
 
 		System.out.println(u);
 
@@ -62,9 +63,9 @@ public class OopService {
 
 	public void doPolymorphism() {
 		// method overriding
-		Task t1 = new Task();
-
-		System.out.println("This should print toString() from Task class: " + t1);
+//		Task t1 = new Task();
+//
+//		System.out.println("This should print toString() from Task class: " + t1);
 
 		ImportantTask it = new ImportantTask();
 
@@ -105,5 +106,15 @@ public class OopService {
 //		BoringTask boring = (BoringTask) new Task();
 		
 
+	}
+	
+	public void doAbstraction() {
+		Task t; // can declare a variable of type task (for upcasting) 
+//		t = new Task(); // cannot instantiate because the class is abstract
+		t = new BoringTask();
+		
+		t.doTask(); // boring task had to override the abstract doTask method declared in the Task class
+		Doable doa = new BoringTask();
+		doa.doSomethingElse();
 	}
 }

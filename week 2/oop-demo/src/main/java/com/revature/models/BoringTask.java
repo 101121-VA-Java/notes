@@ -2,7 +2,10 @@ package com.revature.models;
 
 import java.time.LocalDate;
 
-public class BoringTask extends Task{
+import com.revature.interfaces.Doable;
+import com.revature.interfaces.Issuable;
+
+public class BoringTask extends Task implements Doable{
 	
 	public BoringTask() {
 		super();
@@ -30,9 +33,21 @@ public class BoringTask extends Task{
 	public String toString() {
 		return "Overriden toStringMethod!";
 	}
-	
+
 	@Override
-	public BoringTask getATask() {
-		return new BoringTask();
+	public void doTask() {
+		System.out.println("I'm doing " + this.getName() + " boringly");
+		
 	}
+
+	@Override
+	public void doSomething() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+//	@Override
+//	public BoringTask getATask() {
+//		return new BoringTask();
+//	}
 }

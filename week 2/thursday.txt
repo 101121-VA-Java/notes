@@ -1,0 +1,45 @@
+Abstraction
+	- a way to hide complex implementation behind a simple interface
+		- using methods without actually know how they're implememented
+	- in Java, abstraction is used via the abstract and the interface keywords
+		- "abstract" keyword - non access modifier
+			- can be found in front of a class
+				- [access mod] abstract class [ClassName] {}
+				- means that the class cannot be instatiated
+					- cannot create an object of the abstract class
+					- like template that pushes a user to use more specific CONCRETE(non-abstract) child classes
+				- abstract classes can be inherited
+				- can have abstract methods
+					- Concrete (non-abstract) classes cannot have abstract methods
+						- ie: if an abstract method is present, the class has to be abstract
+					- Abtract classes can have 0 or more abstract methods
+			- can be found in front of a method
+				- [accessMod] abstract [returnType] [methodName]([params]);
+					- method without a body/implementation
+						- method is left to be implemented later (ie: child classes/ interface implementing classes)
+				- abstract methods cannot be private
+			- cannot be found in front of a variable  
+		- "interface" keyword
+			- declares behavior(s) for classes to implement
+				- contract like
+				- a class can implement as many interfaces as desired
+			- convention dictates that interface should end the name with "-able"
+			- every method declared in an interface is going to be implicitely public abstract
+				- void doSomething();
+				- implicitely: public abstract void doSomething();
+			- can have variables
+				- variables must be public static final(cannot be changed)
+					- basically a constant
+					- implicit to interfaces
+			- interfaces can extend one another
+			- Types of interfaces
+				- Marker interfaces
+					- interfaces with no methods
+					- used to provide information to the compiler and JVM
+				- Functional interfaces
+					- interfaces with 1 methods
+					- can use lambda expressions
+				- regular interfaces
+					- any interface
+			- In java 8 the "default" keyword was introduced
+				- to provide default implementation to methods in interfaces in needed

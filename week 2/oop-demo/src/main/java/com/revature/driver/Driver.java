@@ -27,6 +27,9 @@ public class Driver {
 			case "polymorphism":
 				oop.doPolymorphism();
 				break;
+			case "abstraction":
+				oop.doAbstraction();
+				break;
 			default:
 				System.out.println("Option not available.");
 		}

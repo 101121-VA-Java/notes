@@ -2,7 +2,7 @@ package com.revature.models;
 
 import java.time.LocalDate;
 
-public class Task {
+public abstract class Task {
 	
 	private String name;
 	private LocalDate dueDate;
@@ -75,13 +75,16 @@ public class Task {
 		return "Task [name=" + name + ", dueDate=" + dueDate + "]";
 	}
 	
-	public Task getATask() {
-		return new Task();
-	}
+	// because abstract, can no longer create instance of Task
+//	public Task getATask() {
+//		return new Task();
+//	}
 	/*
 	 * public class Object{
 	 * 	public String toString(){
 	 * 		return //memory address; 
 	 * }
 	 */
+	
+	public abstract void doTask();
 }

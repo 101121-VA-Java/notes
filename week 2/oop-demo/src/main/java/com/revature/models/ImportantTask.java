@@ -24,5 +24,17 @@ public class ImportantTask extends Task {
 		this.setDueDate(this.getDueDate().minusDays(1));
 	}
 
+	@Override
+	public void doTask() {
+		System.out.println("I'm doing " + this.getName() + " importantly");
+		
+	}
+
+
+	public void doSomething() {
+		System.out.println();
+		
+	}
+
 
 }
