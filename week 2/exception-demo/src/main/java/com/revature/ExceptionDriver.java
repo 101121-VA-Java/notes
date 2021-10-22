@@ -51,7 +51,7 @@ public class ExceptionDriver {
 			
 		}
 		
-		int a = ed.add(42, 0);
+//		int a = ed.add(42, 0);
 		
 		System.out.println("End of the main method");
 	}

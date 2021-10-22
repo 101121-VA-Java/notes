@@ -54,4 +54,9 @@
 10/22
 -  Training week 1 wrap up session (12:00pm)
 
+---  
+     
+10/25
+-  QC - 10:15am
+
     

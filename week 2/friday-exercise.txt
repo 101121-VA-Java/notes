@@ -1,0 +1,24 @@
+public class Food {
+	public String name;
+	public String type;
+
+	public Food(String name, String type) {
+		this.name = name;
+		this.type = type;
+	}
+
+	public void cook() {
+		if (!name.contains("cooked")) {
+			name = "cooked " + name;
+		}
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Food myFood = new Food("potato", "vegetable");
+		myFood.cook();
+
+		System.out.println(myFood.name);
+	}
+}

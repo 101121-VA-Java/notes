@@ -1,0 +1,91 @@
+Maven
+	- Project management tool, build automation tool
+	- Project management
+		- handle our dependencies for us
+			- dependency:
+				- refers to frameworks/libraries written by other developers to be used in your project
+					- based on:
+						- groupId
+						- artifactId
+						- version
+		- https://mvnrepository.com/
+		- in the pom.xml
+			- Project Object Model
+				- contains information about the project
+				- helps ensuring that everyone on a team is working with the same dependencies and versions
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+   		 	<groupId>org.postgresql</groupId>
+   			 <artifactId>postgresql</artifactId>
+   			 <version>42.2.23</version>
+		</dependency>
+	</dependencies>
+		- stored locally in the ~/.m2 folder
+	- Build automation tool
+		- manages the lifecycle of your application
+		- goal of maven is to create an artifact to be deployed
+			- 3 build lifecycles
+				- clean
+					- remove/clean previous artifacts (.jar/.war)
+				- default
+					- test/package your application
+						- validate
+						- compile
+						- test -> compiled code is test
+						- package -> packages all of the compiled code into a war/jar file
+						- verify
+						- install
+						- deploy
+				- Site
+					- documentation
+		- basic project structure:
+			- src/main/java
+				- where your packages/classes(...) go
+			- src/main/resources
+				- resources like files to configure frameworks/libraries
+			- src/test/java
+				- where test classes
+			- src/test/resources
+				- resources like files related to testing go
+			- pom.xml
+				- Project Object Model (contains metadata about project, properities, dependencies, build details)
+		- defining the main method in a jar
+			- https://maven.apache.org/shared/maven-archiver/examples/classpath.html
+
+Testing
+	- process of checking if an application works as intended
+		- positive testing - making sure that an application handles the correct inputs
+		- negative testing - making sure that an application handles the incorrect inputs
+		- regression testing - making sure that new features added to an application do not break previously written code
+			- making sure that old tests still pass after new code is written
+
+Unit Testing
+	- refers to testing individual unit of functionality
+		- in this case methods
+	- at the bottom of the testing pyramid, therefore the most abundant type of testing
+	- JUnit framework for Java
+
+TDD (Test Driven Development) 
+	- The process of writing tests to fail first to establish the functionality of your application, then writing code to pass those tests
+		- way to approach this
+			- write interfaces/ empty methods to establish the functionality desired
+			- write your tests
+			- write code/implement your methods
+		- benefits
+			- planning/establishing desired behavior earlier on
+			- easy to find where the issue arises since the tests are present
+
+JUnit
+	- JUnit is a Java Unit Testing Framework
+		- JUnit 5
+	- includes a lot of annotations and classes in order to write automated unit tests
+	- leverages the "assert" methods to check for a particular condition to determine a test passes
+		- a test passes when the result obtained is the result desired
+			- ie: an exception to be thrown
+		- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
