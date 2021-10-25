@@ -1,0 +1,14 @@
+10 - 10:15 (ET)
+	- QC Survey
+10:15 - 11:30 (ET)
+	- QC
+
+Afterwards, while I conduct one-on-ones, take the quiz on RevPro and signup for/take this hackerrank contest:
+	- www.hackerrank.com/1011javakevinweek3
+		- while each submissions are individual, feel free to work together to understand how to solve the probem
+			- I'll go over the solution at the end if needed
+	- Both evaluations will be open until 6pm ET.
+
+1-o-1 order:
+	- TBD
+
