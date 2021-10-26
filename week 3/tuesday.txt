@@ -1,0 +1,39 @@
+Java Memory Management
+	- Automatic memory management
+	- Stack
+		- Datastructure that follows a LastInFirstOut pattern (LIFO) 
+		- stores primitives and reference variables
+		- each thread gets its own stack
+		- variables "pop off" the stack once the scope the method is over 
+	- Heap
+		- Object storage
+			- almost anything that's not a primitive is an object
+		- String pool
+			- special place in the heap to store String literals for reusability
+		- shared by all the threads
+			- can lead to concurrency issues if not managed properly
+		- managed by the garbage collector
+
+	- Pass By Value 
+		- means that passing a variable into a method uses the value itself rather than the variable passed in
+			- passing a reference variable in a method passes the reference value of the location in the heap and as such changes made to the object are persisted
+	- Garbage collection
+		- frees up memory/resources once they are no longer referenced
+		- Garbage Collector is a daemon thread
+			- thread that runs in the background
+			- removes objects without references in the heap
+				- finalize() 
+					- last method called upon an object before it is garbage collected
+					- people don't really use this anymore
+			- garbage collection cannot be forced, but it can be suggested
+				- System.gc();
+
+Casting
+	- converting a datatype to another (int to a long)
+		- implicit: if the original datatype has a smaller size than the target datatype (ie: int to long)
+		- explicit: if the original datatype has a larger size than the target datatype (ie: long to int)
+			- int i = (int) [long];
+Wrapper classes
+	- way to treat primitive datatypes as objects
+		- Autoboxing: Automatic conversion of a primitive to its wrapper class
+		- AutoUnboxing: Automatic conversion of a wrapper class into its primitive
