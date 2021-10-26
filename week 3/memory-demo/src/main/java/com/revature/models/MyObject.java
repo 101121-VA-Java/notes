@@ -14,6 +14,7 @@ public class MyObject {
 	}
 
 	public void setMyNumber(int myNumber) {
+		
 		this.myNumber = myNumber;
 	}
 

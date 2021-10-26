@@ -2,6 +2,7 @@ package com.revature.models;
 
 public class Employee {
 
+	// id will be assigned by the System
 	private int id;
 	private String name;
 	private String username;
@@ -12,6 +13,15 @@ public class Employee {
 	public Employee() {
 		super();
 	}
+	
+	public Employee(String name, String username, String password) {
+		super();
+		this.name = name;
+		this.username = username;
+		this.password = password;
+	}
+
+
 
 	public Employee(int id, String name, String username, String password, Role role, Employee manager) {
 		super();

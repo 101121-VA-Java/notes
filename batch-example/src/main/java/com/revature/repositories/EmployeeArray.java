@@ -8,6 +8,7 @@ public class EmployeeArray implements EmployeeDao{
 	
 	public EmployeeArray() {
 		super();
+		employees = new Employee[0];
 	}
 	public EmployeeArray(Employee[] employees) {
 		this.employees = employees;
