@@ -1,18 +1,16 @@
 package com.revature.repositories;
 
 import com.revature.models.Employee;
+import com.revature.models.Role;
 
 public class EmployeeArray implements EmployeeDao{
 
-	private Employee[] employees;
+	private Employee[] employees = { new Employee(0, "EnrollmentAdmin", "EAdmin", "EAPass", Role.ADMIN, null) };
 	
 	public EmployeeArray() {
 		super();
-		employees = new Employee[0];
 	}
-	public EmployeeArray(Employee[] employees) {
-		this.employees = employees;
-	}
+	
 	@Override
 	public Employee[] getAllEmployees() {
 		return this.employees;

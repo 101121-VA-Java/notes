@@ -12,18 +12,18 @@ import com.revature.repositories.EmployeeDao;
 
 public class EmployeeDaoTest {
 
-	private static EmployeeDao ed;
+	private EmployeeDao ed;
 	
 	@BeforeEach
 	public void setup() {
-		Employee[] employees = {new Employee(0, "Kevin", "Kev", "KevPass",Role.BASIC_USER, null)}; 
-
-		ed = new EmployeeArray(employees);
+		ed = new EmployeeArray();
+		ed.addEmployee(new Employee("Kevin", "Kev", "KevPass", Role.BASIC_USER, null));
 	}
 	
 	@Test
 	public void getAllEmployees(){
-		Employee[] expected = {new Employee(0, "Kevin", "Kev", "KevPass",Role.BASIC_USER, null)};
+		Employee[] expected = {	new Employee(0, "EnrollmentAdmin", "EAdmin", "EAPass", Role.ADMIN, null), 
+								new Employee(1, "Kevin", "Kev", "KevPass",Role.BASIC_USER, null)};
 		Employee[] actual = ed.getAllEmployees();
 		assertArrayEquals(expected, actual);
 	}

@@ -10,14 +10,14 @@ public class EmployeeService {
 
 	private EmployeeDao ed; 
 	
-	
-	
+
 	public EmployeeService() {
 		super();
 		ed = new EmployeeArray();
 	}
 
 	public int addEmployee(Employee e) {
+
 		/*
 		 * add business logic here to manipulate e before storage
 		 * Employee, when registering are going to input 

@@ -21,7 +21,14 @@ public class Employee {
 		this.password = password;
 	}
 
-
+	public Employee(String name, String username, String password, Role role, Employee manager) {
+		super();
+		this.name = name;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+		this.manager = manager;
+	}
 
 	public Employee(int id, String name, String username, String password, Role role, Employee manager) {
 		super();

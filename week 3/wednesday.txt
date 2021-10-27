@@ -1,0 +1,96 @@
+.gitignore
+	- notice that it starts with "." so it's a hidden file
+		- to create can do > touch .gitignore
+	- defines files and file extensions to not be tracked by git
+		- NOTE: if the file already exists, it will not get deleted but won't updated anymore
+			- have to delete from the repository manually
+	- generating .gitignore files:
+		- https://www.toptal.com/developers/gitignore/
+		- As of now:
+			- Eclipse
+			- Mac
+			- Java
+			- Maven
+			- VsCode
+			- IntelliJ
+
+Datastructures
+	- solutions to interact/work with data in our applications
+		- answers to problems such as
+			- dynamic lists
+			- unique values only
+			- ordering
+
+Collection (I)
+	- is an interface that can be considered the "super" interface, or the parent interface of all collections
+		- while it extends iterable, Collection declares methods availables in all collections
+			- add();
+			- remove();
+			- contains();
+			- size();
+	- collections only work with objects
+		- need to work with wrapper classes for primitives
+	- Collection interface should not be confused with the Collections class
+		- Collections WITH AN S is a class that provides utility methods to work with collections 
+	- Extends iterable, what allows collectiosn to be iterated over/ use an iterator
+
+List (I)
+	- is an interface that extends Collection, that can hold duplicate values
+	- Concrete implementations of List
+		- ArrayList (C)
+			- Dynamically sized array in which elements can be added and removed
+			- ArrayLists leverage indexes which make them more efficient for retrieval operations
+		- LinkedList (C)
+			- Consists of a series of nodes which store data and a reference to the next node
+			- LinkedList are better for insertion and deletion operations
+Set (I)
+	- is an interface that extends Collection, does not hold duplicate values
+	- Concrete implementations
+		- HashSet
+			- that cannot promise order (leverages hashcode)
+			- leverages a HashMap in the background
+		- TreeSet
+			- ordered
+				- by default follows "natural ordering"
+					- can specify custom order using Comparator/Comparable
+Queue (I)
+	- is an interface that extends Collection, generally it follows a FIFO order (First In First Out)
+	- Concrete implementations
+		- Priority Queues
+			- Ordered by priority
+		- Linked List
+			- implements both List and Queue
+	- Come in with special methods unique to queues
+		- peek
+		- poll
+
+Map (I)
+	- is an interface that does NOT extend Collection, leverage a key value pair system
+		- it does not extend iterable and there cannot be iterated the traditional way 
+		- comes with its own set of methods
+	- Concrete implementations
+		- HashMap
+			- hashcode: 
+				- method that provides a hash value based on the fields of an object
+					- objects that are equals should return the same hashcode
+					- objects that are not equals may return the same hashcode
+						- a good hashcode implementation should try to produce distinct integers for unequal objects
+				- this value is stored internally to store data in a Map and to improve access operation
+		- TreeMap
+			- A map that is ordered 
+
+Comparable
+	- functional interface
+		- compareTo method
+	- implement in the model class itself
+		- should return an integer that will be used to define an order
+			- if integer is negative, is of lesser value
+			- if integer is positive, is of greater value
+			- if integer is 0, objects are of equal value
+	- used to define a natural order
+Comparator
+	- functional interface
+		- compare method
+	- implement in a different class
+		- Comparator for an object
+	- used to define a custom order
