@@ -1,6 +1,7 @@
 package com.revature;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -12,6 +13,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import com.revature.models.Toy;
+import com.revature.models.ToyComparator;
 
 public class Driver {
 
@@ -102,7 +104,32 @@ public class Driver {
 			System.out.println(hm.get(key));
 		}
 		
-
+		System.out.println("Comparator sorting:");
+		
+		Collections.sort(toyArrList, new ToyComparator());
+		
+		for(Toy toy : toyArrList) {
+			System.out.println(toy.getName());
+		}
+		int[] intArr1 = {1 , 2 };
+		String[] stringArr = {"Hello", "world"};
 	}
 
+//	public static void printAll(String[] arr) {
+//		for(String s : arr) {
+//			System.out.println(s);
+//		}
+//	}
+//	
+//	public static void printAll(int[] arr) {
+//		for(int s : arr) {
+//			System.out.println(s);
+//		}
+//	}
+	
+	public static <T> void printAll(T[] arr) {
+		for(T t : arr) {
+			System.out.println(t);
+		}
+	}
 }
