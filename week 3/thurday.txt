@@ -1,0 +1,64 @@
+Multithreading
+	- refers to dealing with applications with concurrent processes
+		- these sub-processes/ path of executions are referred to as threads
+	- priority
+		- defines the order in which threads can access a synchronized resource
+			- resource that can only be accessed by one thread at a time
+		- threads with higher priority get first dibs over other threads
+			- can lead to concurrency issues
+	- types of threads
+		- User-defined threads
+			- JVM ensures their execution to completion
+				- ie: main method - main thread
+		- Daemon threads
+			- "optional"
+			- lower in priority
+			- run in the background
+				- ie: gc
+		- each thread gets their own stack but all threads share the same heap
+
+Creating and running threads in Java
+	- extends the Thread class
+	- implements the Runnable interface
+		- preferred way
+	- override the run() method
+		- to specify the behavior for a thread
+	- instantiate a thread object and invoke the start() method on that thread
+		- start() method creates a new thread and invoke the run() on it
+		- otherwise if run() is called without start, it will just be executed on the main thread
+
+States of a thread
+	- New
+		- created a thread object, run() hasn't been called yet
+	- Runnable
+		- run() has been called and is executing
+	- Blocked
+		- waiting for another thread to be done accessing a resource on which a lock has been placed (synchronized keyword)
+			- synchronized prevents more than one thread at a time to access a resource
+	- Waiting
+		- wait()
+			- waiting for notify/notifyAll()
+		- join()
+			- stops the execution of a thread until another thread is done executing
+	- Timed-waiting
+		- sleep()
+			- wait a certain amount of time
+	- Terminated
+		- everything has been executed
+
+Concurrency issues
+	- starvation
+		- lower priority threads not being able to access a resource because higher priority threads keep taking them
+	- deadlock
+		- occurs when the waiting process is still holding on to another resource that the first needs before it can finish.
+ 
+Lambda expressions
+	- allows for a compact expression of instances of single method class
+		- implements a functional interface without require a whole new class to do so
+			- ie: Runnable, run method
+	- syntax
+		- [interfaceName] [objectName] = ()->[return value];
+		- [interfaceName] [objectName] = ([params])->[return value];
+		- [interfaceName] [objectName] = ([params])->{
+			// code goes here
+		  };
