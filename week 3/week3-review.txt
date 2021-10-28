@@ -1,0 +1,35 @@
+Collections / Generics
+1.	What are collections in Java?
+2.	What are the interfaces in the Collections API?
+3.	What is the difference between a Set and a List?
+4.	What is the difference between an Array and an ArrayList?
+5.	What is the difference between ArrayList and Vector?
+6.	What is the difference between TreeSet and HashSet?
+7.	What is the difference between HashTable and HashMap?
+8.	Are Maps in the Collections API? What makes Map different from other interfaces?
+9.	List several ways to iterate over a Collection. How would you iterate over a Map?
+10.	What is the purpose of the Iterable interface? What about Iterator?
+11.	What is the difference between the Comparable and Comparator interfaces?
+12.	What are generics? What is the diamond operator (<>)?
+13.	Create and instantiate a generic class. Create and use a generic method.
+Threads
+1.	What is multi-threading?
+2.	In what ways can you create a thread?
+3.	List the methods in the Thread class and Runnable interface
+4.	Explain the lifecycle of a thread
+5.	What is deadlock?
+6.	What is the synchronized keyword?
+7.	What is the difference between String, StringBuilder, and StringBuffer? Which of these are thread-safe?
+
+IO / Serialization
+1.	How do you serialize / deserialize an object in Java?
+2.	What is a Marker interface? What does Serializable interface do?
+3.	What are transient variables?
+4.	Difference between FileReader and BufferedReader?
+5.	Explain the try-with-resources syntax
+6.	List some methods in the Scanner class
+
+Log4j
+1.	What are the advantages to using a logging library?
+2.	What is log4j?
+3.	What are the logging levels of log4j?
