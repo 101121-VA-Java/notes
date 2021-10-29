@@ -1,0 +1,9 @@
+11:00:32 [main] ERROR  - This is an error!
+11:00:32 [main] FATAL  - This is fatal!
+11:04:29 [main] ERROR  - This is an error!
+11:04:29 [main] FATAL  - This is fatal!
+11:04:39 [main] ERROR  - This is an error!
+11:04:39 [main] FATAL  - This is fatal!
+11:05:16 [main] ERROR  - This is an error!
+11:05:16 [main] FATAL  - This is fatal!
+11:05:16 [main] ERROR  - Exception was thrown and handled: My Exception is being thrown here
