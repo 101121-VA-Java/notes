@@ -1,0 +1,21 @@
+Monday plan:
+	
+	- Survey (check your emails)
+	- RevPro exam
+	- Hackerrank (Optional, practice)	
+		- https://www.hackerrank.com/1011javakevinweek4
+	- 1-o-1s
+	- QC assessment? 
+
+
+1-o-1s
+	- Albert, Peter, Malolan
+	- Sam, Bezza, Andrew
+	- Andre, Tricia, David
+	- Kendrick, Jeremy, Alex
+	- Dean, Gerardo, Patience
+	- Hannah, Davey, Bruno
+	- Kim, Tevon, Brayden
+
+Content, depending on time available. 
+	- Have PostgreSQL and DBeaver ready
