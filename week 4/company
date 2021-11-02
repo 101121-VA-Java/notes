@@ -28,6 +28,7 @@ create table if not exists employees(
 --alter table employees 
 --	alter column e_name set data type varchar(75);
 
+drop table if exists tasks;
 create table if not exists tasks(
 	/*
 	 * id

@@ -1,0 +1,59 @@
+create table if not exists users(
+	id serial primary key,
+	username varchar(20)
+);
+
+create table friends( 
+	friend1 integer references users(id),
+	friend2 integer references users(id),
+	primary key(friend1, friend2)
+);
+
+insert into users(username) values ('Kevin');
+insert into users(username) values ('Kim');
+insert into users(username) values ('Brayden');
+insert into users(username) values ('Tevon');
+insert into users(username) values 
+	('Davey'),
+	('Tricia');
+
+insert into users (username) values ('Hermia');
+insert into users (username) values ('Galven');
+insert into users (username) values ('Brnaba');
+insert into users (username) values ('Gil');
+insert into users (username) values ('Sharline');
+insert into users (username) values ('Daryl');
+insert into users (username) values ('Celestine');
+insert into users (username) values ('Judy');
+insert into users (username) values ('Bogart');
+insert into users (username) values ('Vina');
+
+insert into friends(friend1, friend2) values (6, 4);
+
+
+update users set username = 'Revature' where id = 15;
+update users set username = 'Revature';
+
+delete from users where id = 15;
+delete from users;
+
+-- * refers to every fields
+select * from users;
+
+select username from users;
+select id from users;
+
+select id, username from users 
+	where id > 21 and length(username) > 7
+	order by username asc;
+
+select * from users
+	where username = 'someValuePassedin';
+
+/*
+ * select * from employees
+ * 		where role = 'manager';
+ */
+
+--drop table friends;
+--drop table users;
