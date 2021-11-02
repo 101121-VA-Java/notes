@@ -1,0 +1,47 @@
+-- This is a single line comment.
+
+/*
+	This 
+	is
+	a
+	multiline
+	comment
+	
+	naming convention is snake_case, due to the lack of case sensitivity
+*/
+
+-- Creating a schema
+--create schema company;
+--drop schema company;
+
+
+drop table if exists employees;
+create table if not exists employees(
+	e_id serial primary key,
+	e_name varchar(50) not null,
+	e_username varchar(20) unique,
+	e_password varchar(20) not null,
+	e_role varchar(20),
+	man_e_id integer references employees(e_id) default 0
+);
+
+--alter table employees 
+--	alter column e_name set data type varchar(75);
+
+create table if not exists tasks(
+	/*
+	 * id
+	 * name
+	 * description
+	 * completion_status
+	 * due_date
+	 * employee
+	 */
+	id serial primary key,
+	t_name varchar(20),
+	t_description text,
+	t_completion_status varchar(10),
+	t_assign_date date default current_date,
+	t_due_date date,
+	t_assigned_emp integer references employees(e_id)
+);
