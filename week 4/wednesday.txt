@@ -32,3 +32,13 @@ JDBC
 			- ie: "select * from employees where = [userInput];
 				- input could be "0; drop table employees;"
 			
+
+Joins
+	- way to combine rows from different tables based on some logical relationship (columns)
+		- inner join/join: return all the records that have matching values in both tables
+		- left (outer) join: return all records from the left table and matched records from the right table
+		- right (outer) join: return all records from the right table and matched records from the left table
+		- full (outer) join: return all records when there is a match in either left or right table
+		- self join: join a table with itself to combine related data from the same table
+
+	- ie: https://www.postgresql.org/docs/10/tutorial-join.html

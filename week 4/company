@@ -48,6 +48,8 @@ create table if not exists tasks(
 	t_assigned_emp integer references employees(e_id)
 );
 
+insert into tasks(t_name, t_description, t_completion_status, t_assigned_emp) values('laundry', 'washing clothes', 'new',1);
+
 insert into employees (e_name, e_username, e_password, e_role) values ('Winnie', 'wbedells0', 'quS5yfk', 'VP Sales');
 insert into employees (e_name, e_username, e_password, e_role) values ('Morgana', 'mwidocks1', 'UfzlAiaRz03Z', 'Research Nurse');
 insert into employees (e_name, e_username, e_password, e_role) values ('Jamey', 'jshitliff2', 'TI8WmGhx7O', 'Safety Technician II');
@@ -62,4 +64,20 @@ insert into employees (e_name, e_username, e_password, e_role) values ('Grier', 
 update employees set man_e_id = 4;
 update employees set man_e_id = 9 where length(e_role) > 19;
 
-select * from employees;
+select * from employees where e_id = 1;
+
+select e.e_name "Employee name", m.e_name "Manager name"
+	from employees e
+	join employees m on e.man_e_id = m.e_id 
+	where e.e_id = 1;
+
+select t.t_name "task name", t.t_description "task description", t.t_completion_status, e.e_name 
+	from tasks t
+	join employees e 
+	on t.t_assigned_emp =e.e_id 
+	where t.id = 1;
+
+-- retrieving all of the tasks for employee of id 1
+select * from tasks where t_assigned_emp = 1;
+
+--delete from employees where e_id = 11; -- instead of 11 it might be anything
