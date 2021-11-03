@@ -137,4 +137,16 @@ DML
 	- DELETE
 		- delete from [table_name] here [condition]; 
 			- if no where clause is specified, it will delete every record in the table
-		
+
+DQL
+	- Data Query Language
+		- "sub-sub" language/ part of DML
+	- Statements used to retrieve information from tables
+	- SELECT
+		- main operation when querying data that can be filtered using additional clauses
+		- Result set can be filtered using: (order matters)
+			- where
+			- group by
+			- having 
+			- order by
+			- limit

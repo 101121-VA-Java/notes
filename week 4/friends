@@ -55,5 +55,5 @@ select * from users
  * 		where role = 'manager';
  */
 
---drop table friends;
---drop table users;
+drop table friends;
+drop table users;
