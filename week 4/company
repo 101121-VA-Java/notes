@@ -64,7 +64,8 @@ insert into employees (e_name, e_username, e_password, e_role) values ('Grier', 
 update employees set man_e_id = 4;
 update employees set man_e_id = 9 where length(e_role) > 19;
 
-select * from employees where e_id = 1;
+select e_name from employees where e_id = 1;
+select length(e_name), upper(e_username) from employees;
 
 select e.e_name "Employee name", m.e_name "Manager name"
 	from employees e
@@ -81,3 +82,13 @@ select t.t_name "task name", t.t_description "task description", t.t_completion_
 select * from tasks where t_assigned_emp = 1;
 
 --delete from employees where e_id = 11; -- instead of 11 it might be anything
+
+-- aggregate function
+select count(e_name) from employees where length(e_name) > 6;
+select length(e_name) from employees where length(e_name) > 6;
+select avg(length(e_name)) from employees where length(e_name) > 6;
+
+-- in this case, the count will apply based on the manager id
+select man_e_id, count(e_name) from employees 
+group by man_e_id 
+having man_e_id > 8;
