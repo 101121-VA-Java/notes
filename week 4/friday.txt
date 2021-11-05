@@ -1,0 +1,46 @@
+Design Pattern
+	- Best practice to address a certain programming problem
+	
+
+Singleton DP
+	- used to ensure that there is only one instance of a class
+		- ie: used for heavy resources
+	- enforced using several conditions
+		- private constructor: prevent classes from creating an instance
+		- private static instance of the singleton class: static, to enforce that there is only one since it's associated with the class
+		- public static synchronized accessor method: used retrieve the singleton instance
+
+Factory DP
+	- used to create/return implementations of classes/interfaces
+	- useful when the specific implementation does not matter
+	- enforces abstraction
+
+Set operations(union)
+	- operations used to combine queries together
+		- NOTE: different from joins which combine tables together
+		- combine the rows of different result sets
+	- union
+		- combining select query results with no duplicates
+	- union all
+		- combining select query results with duplicates
+			- faster because duplicates are not filtered out
+	- intersect
+		- returns only the common records from both data sets
+	- except
+		- returns a dataset where the second results are removed from the first
+
+Index
+	- providing a more efficient way to retrieve records in a database 
+		- an index is generated on fields set as primary key
+		- BTree
+			- leverages binary tree
+			- better for comparison operations
+		- Hash
+			- leverages hashing
+			- better for equality
+	- makes update/insert/delete operation may take longer due to updating the index
+
+Views
+	- views are unmaterialized "view" of a query
+		- views are not "stored" in the db
+	- helpful to keep nested queries neat and promoring reusability.
