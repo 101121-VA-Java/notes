@@ -97,7 +97,7 @@ select *
 	from employees e
 	join employees m on e.man_e_id = m.e_id;
 	
-select * from employees where man_e_id = 4
+select * from employees where man_e_id > 4
 union
 select * from employees where length(e_username) > 7;
 
@@ -118,5 +118,14 @@ select e_name from employees where e_name = 'Nicola';
 create index e_name_btreeidx on employees(e_name);
 drop index e_name_btreeidx;
 
+
 create index e_name_hashidx on employees using hash (e_name);
 drop index e_name_hashidx;
+
+
+select * from (select * from employees where length(e_username) > 7) e where e.man_e_id = 4;
+create view employees_view as select * from employees where length(e_username) > 7;
+
+select * from employees_view where man_e_id = 4;
+
+explain analyze verbose select * from employees;
