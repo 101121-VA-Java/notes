@@ -59,4 +59,9 @@
 10/25
 -  QC - 10:15am
 
+---  
+     
+11/10
+-  Project 0 presentations - 4-6pm
+
     

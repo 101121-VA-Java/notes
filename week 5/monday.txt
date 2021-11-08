@@ -1,0 +1,41 @@
+Monday plan
+	- QC surveys
+	- RevPro assessment
+	- Hackerrank Challenge
+		- www.hackerrank.com/1011javakevinweek5
+			- SQL based, you will be asked to write SQL queries
+				- Syntax should be fairly similar, feel free to look at documentation as needed
+	- 1-o-1s
+		Albert
+		Tricia
+		Alex
+
+		Davey
+		David
+		Dean
+
+		Jeremy
+		Peter
+		Sam
+
+		Peter
+		Gerardo
+		Bruno
+
+		Andre
+		Brayden
+		Bezza
+
+		Andrew
+		Patience
+		Malolan
+
+		Kim
+		Tevon
+		Hannah
+
+	- P0 presentations:
+		- Wednesday 4-6pm ET
+			- 5 minutes each
+		- Final push Wednesday morning 10am
+	
