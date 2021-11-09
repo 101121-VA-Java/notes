@@ -1,0 +1,116 @@
+Resources:
+	- https://www.w3schools.com/
+	- https://developer.mozilla.org/en-US/docs/Web/HTML
+	- RevPro
+
+Optional VsCode add-on:
+	- Live Server
+		- allows for automatic refresh of HTML page in browser
+
+HTML
+	- Hypertext Mark-up Language
+		- not a programming language
+		- Mark-up language
+	- Define the structure of a webpage using HTML tags
+		- tags following a nested structure
+		- structure of an HTML document
+			- Doctype Declaration (optional as of html5)
+				- tag that indicates the file is an HTML doc
+			- html
+				- head
+					- metadata (information about the webpage)
+				- body
+					- information displayed on the webpage
+	- Elements in HTML have attributes
+		- these are used to provide more information regarding the tag
+			- global attributes
+				- present in all html tags
+					- class, id, style
+			- local attributes
+				- present in certain tags
+					- src, href
+		- ie:
+			<div id="div1">Hello World! By Kevin x2.</div>
+			- div element with an attribute of id
+	- Semantic elements
+		- concept introduced in html5
+		- provides more meanings to tags
+			- helps with accessbility
+		- names such as 
+			- nav, main, section, footer, header.... instead of divs everywhere
+	- Headers
+		- h1 -> h6
+			- biggest to smallest
+	- Forms
+		- tags that can be used to take user input and submit information
+			- can submit information without js, just using attribute
+				- method: specify the HTTP method
+				- action: specify the url
+	- self-closing tags
+		- elements that do not require a closing tag
+	- List
+		- Ordered and unordered list
+			- ol
+				- ordered list
+			- ul
+				- unordered list
+			- li
+				- list items
+	- Tables
+		- nested in the table tag
+			- tr to define a row
+			- th/td to define a cell
+
+CSS
+	- Cascading style sheets
+		- style is loaded from top to bottom
+	- adds looks/style to HTML
+		- HTML is the structure of a webpage, CSS is the styling
+	- add CSS
+		- inline
+			- in the HTML tag via attribute
+				- <div id="div1" style="color: cornflowerblue;"></div>
+		- internally
+			- in the HTML document, in the head tag
+				- <style>
+					selector {
+						property: value;
+					}
+				  </style>
+		- externally
+			- from external stylesheets
+				- best practice because can be reusable
+			- <link rel="stylesheet" href="main.css">
+
+	- Selectors
+		- target specific elements to be styled
+			- tag
+			- class (.className)
+			- id (#idName)
+			- target elements more specifically: 
+				- ie: nested elements...
+				- https://www.w3schools.com/cssref/css_selectors.asp
+		- styles apply based on specificity, most specific element will overrule
+			- most to least: id > class > tag
+	- CSS Box Model
+		- Margin, Border, Padding, Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

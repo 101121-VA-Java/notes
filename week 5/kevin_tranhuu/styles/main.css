@@ -1,0 +1,30 @@
+html {
+    background-image: linear-gradient(45deg, black 0%, white 70%, black 100%);
+    padding: 1.5em;
+}
+
+body{
+    background-color: blue;
+    padding: 1em;
+    width: 50em;
+    border: 2px solid black;
+}
+
+header{
+    background-color: honeydew;
+    padding: 2em;
+    text-align: center;
+}
+
+nav{
+    background-color:navajowhite;
+}
+
+footer{
+    background-color: firebrick;
+}
+
+main {
+    background-color: mediumspringgreen;
+}
+
