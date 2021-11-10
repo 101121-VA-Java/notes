@@ -92,7 +92,7 @@ CSS
 				- https://www.w3schools.com/cssref/css_selectors.asp
 		- styles apply based on specificity, most specific element will overrule
 			- most to least: id > class > tag
-	- CSS Box Model
+	- CSS Box Model (common interview question)
 		- Margin, Border, Padding, Content
 
 
