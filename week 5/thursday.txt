@@ -5,3 +5,17 @@ BootStrap
 	- Responsive Web Design
 		- websites and webpages that automatically adapt to different screen size/types
 		- uses grid system to enable behavior
+
+Mockito
+	- Java Framework used alongside unit testing frameworks such as JUnit
+	- Allows for mocking behavior
+		- mocks objects to be used with Unit tests
+			- ie: mocking dao layer so that database is not actually changed with every tests
+	- @Mock
+		- indicating to Mockito that a mock implementation is needed
+	- @InjectMocks
+		- specify an object that needs to have the mock implementation injected into it
+			- replaces the actual implementation, ie: (EmployeePostgres)
+	- when(mockObject.methodName(params)).thenReturn(returnValue);
+	- @ExtendWith(MockitoExtension.class)
+		- allows us to specify that we are running our unit tests with mockito

@@ -56,7 +56,7 @@ Employees must select the type of reimbursement as: LODGING, TRAVEL, FOOD, or OT
 * The middle tier shall use Javalin for dynamic Web application development. 
 * The front-end view shall use HTML/JavaScript to make an application that can call server-side components. 
 * The middle tier shall follow proper layered architecture and implement **log4j** for appropriate logging. 
-* The service layer and the DAO layer should be thoroughly tested.
+* The service layer should be thoroughly tested.
 
 **Stretch Goals:** *These will count for extra credit and are entirely optional*
 * Users can upload a document or image of their receipt when submitting reimbursements which can be reviewed by a financial manager.

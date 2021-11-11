@@ -1,6 +1,5 @@
 package com.revature.daos;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +18,7 @@ public class EmployeePostgres implements EmployeeDao {
 		String sql = "select * from employees where e_id = ? ";
 		Employee emp = null;
 
-		try (Connection con = ConnectionUtil.getHardCodedConnection()) {
+		try (Connection con = ConnectionUtil.getConnectionFromEnv()) {
 			PreparedStatement ps = con.prepareStatement(sql);
 
 			ps.setInt(1, id); // 1 refers to the first '?'
@@ -80,7 +79,7 @@ public class EmployeePostgres implements EmployeeDao {
 		String sql = "insert into employees (e_name, e_username, e_password, e_role, man_e_id) "
 				+ "values (?, ?, ?, ?, ?) returning e_id;";
 
-		try (Connection con = ConnectionUtil.getConnectionFromFile()) {
+		try (Connection con = ConnectionUtil.getConnectionFromEnv()) {
 			PreparedStatement ps = con.prepareStatement(sql);
 
 			ps.setString(1, employee.getName());
@@ -95,7 +94,7 @@ public class EmployeePostgres implements EmployeeDao {
 				genId = rs.getInt("e_id");
 			}
 
-		} catch (SQLException | IOException e) {
+		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
