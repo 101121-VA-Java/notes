@@ -1,0 +1,7 @@
+BootStrap
+	- Library of classes that can be leveraged as premade templates
+		- import bootstrap into HTML page
+		- leverage classes to style elements
+	- Responsive Web Design
+		- websites and webpages that automatically adapt to different screen size/types
+		- uses grid system to enable behavior
