@@ -2,9 +2,12 @@
 
 /*
     Block Comments
+    add
+    lines
+    here
 */
 
-// "use strict"; // See line 83.
+//"use strict"; // See line 83.
 
 helloLog();
 
@@ -17,7 +20,8 @@ function logMessage(message) {
     console.log(message);
 }
 
-// var globalVar;
+var globalVar = 'Hello World!';
+globalVar = false;
 console.log(globalVar);
 // hoisting only happens with var declared variables
 // console.log(letVar);
@@ -32,9 +36,10 @@ logMessage(null);
 var m; // Undefined
 logMessage(m);
 
-if(0){
+// truthy/falsy values
+if ('false') {
     console.log('This is true');
-}else{
+} else {
     console.log('This is false')
 }
 
@@ -46,6 +51,12 @@ function logMessageFromInput() {
     console.log(message);
 }
 
+var myFunc = function (x, y) {
+    return x + y;
+};
+
+console.log('this is my func ' + myFunc(1, 3));
+
 var logBtn = document.getElementById('logBtn');
 /* Two different ways of adding an event listener */
 logBtn.addEventListener('click', logMessageFromInput);
@@ -53,10 +64,10 @@ logBtn.addEventListener('click', logMessageFromInput);
 
 /* Objects and Arrays */
 var obj = {
-    'id':1,
-    'name':'Revature',
-    'favoriteColor':'orange',
-    'isObject':true
+    'id': 1,
+    'name': 'Revature',
+    'favoriteColor': 'orange',
+    'isObject': true
 };
 var arr = [1, 'Revature', 'orange', true];
 // Be familiar with some of the array functions
@@ -65,11 +76,12 @@ arr.indexOf(1);
 console.log(obj);
 console.log(arr);
 console.log(typeof obj + ', ' + typeof arr);
+console.log('Type of NaN:' + typeof NaN);
 
 var obj2 = {
-    'firstName':'Hello',
-    'lastName':'World',
-    'fullName':function() {
+    'firstName': 'Hello',
+    'lastName': 'World',
+    'fullName': function () {
         console.log(this.firstName + ' ' + this.lastName);
     }
 }
@@ -79,6 +91,12 @@ obj2.firstName = 'Goodbye';
 obj2.fullName();
 
 /* Scopes */
+/*
+    declaration:
+        var globalVar
+    assignment
+        globalVar = 'something';
+*/
 var globalVar = 'I\'m a global-scope variable.';
 var globalVar = 'Something else'; // fine
 function myFunction() {
@@ -88,6 +106,7 @@ function myFunction() {
     if (true) {
         let blockVar = 'I\'m a block-scope variable.';
         // let blockVar = 'Something new'; // cannot redeclared let
+        blockVar = 'reassigned!';
         const blockConst = 'I\'m also a block-scope variable.';
         // blockConst = 'something else'; // throws an error
     }
@@ -97,10 +116,10 @@ function myFunction() {
     console.log(functionVar);
     //var functionVar = 'I\'m a function-scope variable.'
 }
-
+//console.log('outside of scope' + functionVar); // cannot be accessed outside of function
 /* Immediately Invoked Function Expression */
-(function () { console.log('Hello from the IIFE')})();
-var returnVal = (function () { return 'IIFE result'})();
+(function () { console.log('Hello from the IIFE') })();
+var returnVal = (function () { return 'IIFE result' })();
 console.log(returnVal);
 
 let letVar = 0;

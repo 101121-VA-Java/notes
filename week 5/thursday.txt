@@ -19,3 +19,98 @@ Mockito
 	- when(mockObject.methodName(params)).thenReturn(returnValue);
 	- @ExtendWith(MockitoExtension.class)
 		- allows us to specify that we are running our unit tests with mockito
+
+JavaScript
+	- a scripting language that can be used for client-side web applications
+		- can also be used server side
+	- interpreted language
+		- not a compiled language, no compilation step, interpreted by the browser
+		- nowadays more modern browsers include JIT (just in time compilation)
+	- supported by all modern web browsers
+	- ECMA, manages the standard specification of JS
+		- ECMAScript - standards
+			- ES6, ES7... 
+	- multi-paradigmed
+		- mainly supports functional programming but can also mimick OOP
+	- dynamically/weakly typed language
+		- variables do not have to be declared with a specific type and can be changed dynamically
+			- type coersion: 8 == '8' --> compares the value itself, return true
+				- === to compare type and value
+	- semi-colon injections
+		- puts a semi-colon where it feels like it's appropriate implicitely.
+			- can lead to issues
+	- ways to include JS to an html page
+		- internally, include between <script></script>
+		- externally, <script src="path/to/file.js"></script>
+			- best practice
+	- Datatypes in JS
+		- "primitives"
+			- boolean
+			- number
+			- null
+			- undefined
+			- symbol -- we're not going to talk about symbol
+			- string
+		- "objects"
+			- objects
+				- stored as key-value pairs
+				- similar to JSON
+			- arrays
+				- unlike Java, arrays are dynamically sized and can contain multiple datatypes
+				- QC likes to ask about array methods
+					- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+		- Truthy vs Falsy
+			- any type in JS will valuate to either true or false
+			- falsy values
+				- null
+				- underfined
+				- 0
+				- ''
+				- false (the boolean)
+				- NaN (not a number)
+		- Functions
+			- defined using the function keyword
+				- function funcName(param1, param2){}
+				- return a value, using the return keyword
+			- additional types of functions
+				- Function Expression/Anonymous Function
+					- function declared without an explicit name, assigned to a variable instead
+						- var someName = function (param1, param2){ return ...;}
+				- SelfInvoking Function(IIFE, immediately invoked function expression)
+					- function invoked immediately after definition
+						- (function() {//code})();
+				- Callback function
+					- functions passed in as an argument
+					- help with asynchronous programming
+					- 
+					function funcOne(x) {//something with x}
+					function funcThree(x) {//something else with x}
+
+					function funcTwo(y, callback){
+						callback(y);
+					}
+					
+					funcTwo(6, funcOne);
+					funcTwo(6, funcThree);
+		- JavaScript scopes
+			- where a declared variable is accessible
+			- global
+				- variable declared outside of the function scope
+				- accessible anywhere within the script
+			- function
+				- variables declared within a function block
+			- block
+				- variables declared with a {} block
+				- new to ES6
+					- introced let and const to declare variables
+						- let can be reassigned but not redeclared
+						- const cannot be reassigned nor redeclared
+		- Hoisting
+			- variables declared var will be hoisted to the top of their scope
+				- top of global/function scope
+				- functions get hoisted
+			- used before they are declared
+
+		- 'use strict'
+			- defined that the code should be executed in strict mode
+				- can't use undeclared variables
