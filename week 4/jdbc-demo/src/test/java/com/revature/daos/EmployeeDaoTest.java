@@ -1,5 +1,6 @@
 package com.revature.daos;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.io.FileNotFoundException;
@@ -19,6 +20,7 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.revature.models.Employee;
 import com.revature.util.ConnectionUtil;
 
 @ExtendWith(MockitoExtension.class)
@@ -70,6 +72,12 @@ public class EmployeeDaoTest {
 	@Test
 	public void getByIdDoesNotExists() {
 		assertNull(ed.getEmployeeById(25));
+	}
+	
+	@Test
+	public void getByIdExists() {
+		Employee expected = new Employee(1, "test name", "test username", "test password", "test role", new Employee());
+		assertEquals(expected, ed.getEmployeeById(1));
 	}
 	
 	public static Connection getH2Connection() {
