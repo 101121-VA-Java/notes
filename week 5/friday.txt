@@ -45,3 +45,112 @@ Event propagation
 			- where boolean => false (or no argument) -> bubbling
 	- to stop even propagation
 		- event.stopProgation();
+
+HTTP
+	- HyperText Transfer Protocol
+		- transfer protocol to exchange information over the web
+	- Consists of requests and responses exchanged between a client and a server
+	- information can be sent in many forms, plaintext, HTML, 
+	- JSON (JavaScript Object Notation)
+		- standard format for data transfer
+		- allows information exchange between different applications(ie: different languages, frameworks...)
+		
+	- HTTP request
+		- HTTP version: 1/1.1
+		- Verb
+			- HTTP methods: describes the operation requested by the HTTP request
+			- 4 main ones
+				- GET - retrieval operation (like select)
+				- POST	- create operation (like insert)
+				- PUT - update operation
+				- DELETE - delete operation
+		- URL
+			- where the request is sent to/ resource location
+		- Header
+			- metadata about the request
+		- Body
+			- can be empty
+			- can be used to include information
+				- ie: information about a user to be created...
+	- HTTP response
+		- HTTP version
+		- Header
+		- Body
+			- can be empty
+			- can be used to return the information requested
+		- Status code
+			- information about the status of the request (100 - 500s)
+				- 100 level: informational
+				- 200 level: success
+				- 300 level: redirect
+				- 400 level: client error
+				- 500 level: server error
+
+AJAX
+	- Asynchronous JS And XML
+	- library that allows us to send HTTP requests and receive HTTP responses
+		- allows for partial page reload
+			- making async calls, code is still running while we wait for the HTTP response
+	- 4 main Steps
+		- create XMLHttpRequest object
+		- setting a callback function to the ready state change of that object
+		- parameterize / open the request object (set request information)
+		- send the request
+	- 5 ready states
+		- 0: unsent - xhr object has beent created
+		- 1: opened - .open() has been called
+		- 2: headers received -- request has been sent, response headers have been received
+		- 3: loading - body of the response is loading
+		- 4: done - full response has been received and is ready for manipulation
+	- onreadystate change callback function
+		- checks that the ready state is 4 to make sure the the response was fully received
+		- checks that the status code is 200 for success
+		- define handling behavior for the response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
