@@ -1,0 +1,89 @@
+HTML
+1.	What is HTML?
+2.	What is the HTML5 doctype declaration?
+3.	List some tags. What is <head> used for? <body>?
+4.	What are the required tags for an HTML document?
+5.	What is the tag for ordered list? unordered list? Change bullet styling?
+6.	What features came with HTML5? Are HTML 5 tags different from other tags?
+7.	Do all tags come in a pair? List a self-closing tag.
+8.	What’s the difference between an element and an attribute? List some global attributes.
+9.	What is the syntax for a comment in HTML?
+10.	What tags would you use to create a table? A navbar? What about a form?
+11.	What’s the difference between a class and id?
+12.	How would you include CSS into an HTML document? What about JS?
+13.	What is a semantic tag? What about formatting tags/elements?
+14.	What’s the difference between a block and an inline element?
+
+CSS
+1.	What is CSS? what are the different ways of styling an html file?
+2.	Which way has highest priority when styles cascade: inline, internal, and external stylesheets. Which is best practice? Why?
+3.	What are the different CSS selectors? Write the syntax for each.
+4.	What is a psuedo-class? What is the syntax for selecting that?
+5.	Write a CSS selector for styling all spans inside of a div. What about only targeting spans that are direct descendents of divs?
+6.	Can I select multiple elements at once with CSS? If so, what is the syntax?
+7.	Explain the concept of specificity and how it relates to styling conflicts
+8.	Explain the CSS box model
+9.	What is Bootstrap? What are some bootstrap classes you can use?
+
+
+JavaScript
+Language Fundamentals
+1.	What is JavaScript? What do we use it for?
+2.	Can we run JavaScript in a web browser, on a server, or both?
+3.	What programming paradigm(s) does JS support?
+4.	What are the data types in JS?
+	1.	What is the type of NaN? What is the isNaN function?
+	2.	What is the data type of a function?
+	3.	What about an array?
+4.	What is the difference between undefined and null?
+5.	What are JS objects? what is the syntax?
+6.	What is JSON? Is it different from JS objects?
+7.	What are some ways you can use functions in JS?
+8.	What are the different scopes of variables in JS?
+	1.	What are the different ways to declare global variables?
+9.	What is function and variable hoisting?
+10.	Explain how the guard and default operators work
+11.	What are callback functions? What about self-invoking functions?
+12.	Use the object literal syntax to create an object with some properties
+13.	What is a truthy or falsy value? List the falsy values.
+14.	What is the difference between == and ===? Which one allows for type coercion?
+15.	Explain the template literal syntax
+16.	What is a Promise?
+17.	What are arrays in JS? can you change their size?
+18.	List some array methods and explain how they work
+19.	Explain what “strict mode” does
+20.	What will happen when I try to run this code: console.log(0.1+0.2==0.3) ?
+
+ES6+
+21.	What new features did ES6 introduce?
+22.	What is the difference between var, let, and const keywords?
+23.	Give the syntax for template literals / string interpolation
+24.	What’s the difference between a normal function declaration and an arrow function?
+25.	What is the difference between for-of and for-in loops?
+26.	Explain the async/await keywords
+
+Events and DOM
+27.	What is the DOM? How is it represented as a data structure? What object in a browser environment allows us to interact with the DOM?
+28.	List some ways of querying the DOM for elements
+29.	How would you insert a new element into the DOM?
+30.	What are event listeners? What are some events we can listen for? What are some different ways of setting event listeners?
+31.	What is bubbling and capturing and what is the difference?
+
+AJAX
+32.	What is AJAX? why do we use it?
+33.	Explain why it is important that AJAX is asynchronous
+34.	List the steps to sending an AJAX request
+35.	What are steps to sending an AJAX request?
+36.	List the different ready states of the XmlHttpRequest object
+37.	How does the fetch API differ from the XHR object?
+
+
+HTTP
+1.	What does HTTP stand for?
+2.	What are the components inside of an HTTP request? What about an HTTP response?
+3.	What are the important HTTP verbs / methods and what do they do?
+	1.	Which are idempotent?
+	2.	Which are safe?
+4.	List the levels of HTTP status codes and what they mean
+5.	What are some specific HTTP status codes that are commonly used?
+

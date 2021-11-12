@@ -42,7 +42,7 @@ function getData() {
 }
 
 function populateData(response) {
-    console.log(response);
-
+    // console.log(response);
+    console.log(response.name);
     // Using DOM manipulation, display information about pokemon to the webpage
 }
