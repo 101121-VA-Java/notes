@@ -76,6 +76,10 @@ JavaScript
 				- Function Expression/Anonymous Function
 					- function declared without an explicit name, assigned to a variable instead
 						- var someName = function (param1, param2){ return ...;}
+				- Arrow function/notation
+					- short hand syntax for writing functions
+					- declaration, parameters, statements
+						- var someName = param1, param2 => statements;
 				- SelfInvoking Function(IIFE, immediately invoked function expression)
 					- function invoked immediately after definition
 						- (function() {//code})();

@@ -107,6 +107,28 @@ AJAX
 		- checks that the status code is 200 for success
 		- define handling behavior for the response
 
+Fetch API
+	- an API in JS that allows us to send HTTP requests and receive HTTP responses
+		- introduced in ES6
+	- fetch(URL) - get
+	- fetch(URL, {method: 'POST', body: JSON.stringify(JSObject)});
+	- Can be used alongside async and await
+		- introduced in ES7
+		- async
+			- used to specify a function that returns a promise or is making an asynchronous call
+		- await
+			- used in an async function to make an asynchronous call
+
+S3 (AWS)
+	- Simple Storage Service
+		- Highly scalable
+		- Highly durable and available
+	- can programmatically access an s3 using the Amazon SDK
+	- can host static webpages on S3
+		- https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
+
+
+
 
 
 
