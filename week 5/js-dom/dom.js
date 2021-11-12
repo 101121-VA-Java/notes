@@ -51,8 +51,13 @@ function changeHelloSpan() {
     // Sets the span's text to the random message.
     // helloSpan.innerHTML = message;
     helloSpan.innerHTML = `<strong>
-        ${message}!
+        ${message}
     </strong>`;
+    // '<strong>' + message +'!</strong>' 
+
+    // console.log(`Hello
+    
+    // world!`);
 }
 
 /*

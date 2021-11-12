@@ -1,0 +1,47 @@
+DOM
+	- Document Object Model
+		- tree like representation of an HTML page using JS objects
+			- each node of the tree represents a nested HTML element
+	- Can traverse/navigate/retrieve elements from the DOM using js methods
+		- document.getElementById
+		- document.getElementsByClassName
+		- document.getElementsByTagName
+		- // can retrieve siblings, childs....
+	- Can programmatically manipulate these elements using their properties
+		- attributes
+		- setAttributes
+		- innerHTML
+	- Can also create and append elements from JS
+		- createElement("div") - creates an HTML element
+		- appendElement("") - attach that element to the appropriate location in the DOM 
+
+Template literal
+	- declared between backticks: `` 
+	- preservers new line
+	- easier than concatenation
+		- using concatenation: 'some string' + somevalue + '.'
+		- using template literal: `some string ${somevalue}.`
+			- to inject a value ${varName}
+
+Event listeners
+	- listeners that wait for certain events to happen to execute some functionality
+		- onclick
+		- onmousehover
+		- onkeydown
+		- ...
+	- 1st step, retrieve element
+	- assigning functionality
+		- element.onclick = callback
+		- element.addEventListener(event, callbackFunction, boolean)
+
+Event propagation
+	- how event listeners handle events for elements that have a parent/children with event listeners as well
+	- 2 types
+		- bubbling: default behavior - event bubbles up from the innermost child to the outermost parent
+		- capturing: event starts from the outermost parent and moves down to the innermost child element
+	- to specify behavior:
+		- element.addEventListener(event, callbackFunction, boolean)
+			- where boolean => true -> capturing
+			- where boolean => false (or no argument) -> bubbling
+	- to stop even propagation
+		- event.stopProgation();

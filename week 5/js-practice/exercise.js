@@ -1,7 +1,7 @@
 // Problem 1: Create a function "isWeekday" which takes a single argument and returns true if the argument is a day during the work week. It should return false if it is not.
 
 function isWeekday(input) {
-    return;
+    return true;
 }
 
 // Problem 2: Create a function "isEven" which takes a single argument and returns true if the argument is an even integer. It should return false if it is not
