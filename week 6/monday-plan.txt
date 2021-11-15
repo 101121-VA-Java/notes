@@ -1,0 +1,24 @@
+Monday plan
+	- QC Survey
+	- RevPro Assessment - Open from 10:15am - 6pm
+	- Hackerrank - Open from 10:15am - 6pm
+		www.hackerrank.com/1011javakevinweek6
+	- 1-o-1
+		- Sam, Patience, Alex, Dean
+		- Tricia, Peter, Gerardo, Hannah
+		- Jeremy, Davey, Brayden, David
+		- Albert, Bruno, Kendrick, Bezza
+
+	- Afterwards
+		- group check-ins, + mock-interview practice
+		- group check-ins format
+			- come up with a group name.
+			- everyday, volunteer a notetaker, go around the room and answer the following questions
+				- What did I do yesterday
+				- What did am I working on today
+					- ie: "I'm working on x feature on my project" 
+				- Do I have any blockers
+					- something outside of one's control preventing them from woking on their task
+						- ie: "I'm waiting to get access to x/y/z"
+			- once everyone has gone, upload the notes to the common repository
+				- [group-name]-[date]

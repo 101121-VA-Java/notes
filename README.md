@@ -64,4 +64,8 @@
 11/10
 -  Project 0 presentations - 4-6pm
 
+---  
+     
+11/16
+-  QC - 2pm
     
