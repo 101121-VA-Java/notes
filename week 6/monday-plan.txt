@@ -15,8 +15,10 @@ Monday plan
 			- come up with a group name.
 			- everyday, volunteer a notetaker, go around the room and answer the following questions
 				- What did I do yesterday
-				- What did am I working on today
+					- (last work day)
+				- What am I working on today
 					- ie: "I'm working on x feature on my project" 
+						- "I have a question about x/y/z"
 				- Do I have any blockers
 					- something outside of one's control preventing them from woking on their task
 						- ie: "I'm waiting to get access to x/y/z"
