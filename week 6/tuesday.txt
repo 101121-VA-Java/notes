@@ -66,6 +66,17 @@ JSON
 		- JavaScript Like
 		- string format used to represent objects to be exchanged over the web
 			- syntax: {"key1":"value1", "key2":"value2"}
+				- {} represent an object
+				- key represent a field
+				- value represent the field's value
+
+JSON Marshalling/Object mapping
+	- Converting Java Objects to JSON
+		- mapping for data exchange
+	- Jackson-databind
+		- provides us with an object mapper to convert Java to JSON and vice versa
+		- Jackson integrates very well with javalin
+	
 
 
 
