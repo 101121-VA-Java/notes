@@ -1,0 +1,128 @@
+POJO/ Java Beans
+	- POJO: Plain Old Java Object
+		- Any java object, not bound to any specific restriction
+		- used to define an entity
+	- Java Beans
+		- Special type of POJOs
+			- All java beans are POJOs but not POJOs are Java beans
+		- should implement the Serializable interface
+			- marker interface that provides information to the compiler that a class can be serialized
+				- serialization: process of converting an object into a stream of byte to store that object(file, db)...
+		- no-args constructor defined
+		- all fields to be encapsulated
+			- private
+			- setters/getters
+		- override Object class methods
+			- toString()
+			- hashcode()
+			- equals()
+
+CRUD operations
+	- Create | Read | Update | Delete
+	- POST | GET | PUT | DELETE
+
+
+Javalin
+	- lightweight framework for Java (and Kotlin) to handle HTTP requests and response
+	- runs on an embedded webserver(Jetty)
+		- Jetty: an open source web server and servlet container which allows a servlet application to run 
+	- Built on top of Servlets
+	- Set up
+		- dependencies
+			- Javalin
+			- slf4j
+			- (Object mapper, optional)
+		- main method
+		- Javalin app = Javalin.create()
+			      = Javalin.create( config -> {})
+		- app.start(portNum)
+			- by default 8080
+		- HTTP handlers
+			- a functional interface that takes in a Context Object as a parameter, used to specify a behavior to handle a request at a particular endpoint
+				- Context object is an abstraction of HttpServletRequest and HttpServletResponse
+					- used to retrieve information from the request
+						- url
+						- headers
+						- body
+					- used to add information to the response
+						- headers
+						- body
+						- status code
+				- https://javalin.io/documentation#context
+			- app.get("path/endpoint", Executable<Handler>)
+			- app.get("path/endpoint", lambda)
+			- app.get("path/endpoint", (ctx) -> { // handle request})
+			- app.post("path/endpoint"...)
+
+			.../employees 
+				- Get
+					- retrieve all employees
+				- Post
+					- add a new employee
+					- include employee information in the request body
+
+JSON
+	- JavaScript Object notation
+		- JavaScript Like
+		- string format used to represent objects to be exchanged over the web
+			- syntax: {"key1":"value1", "key2":"value2"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
