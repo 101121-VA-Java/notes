@@ -17,7 +17,7 @@ REST defines 6 architectural constraints which make a web service truly RESTful:
 - Layered system
 - Code on demand (optional)
 
-Resource: https://www.codecademy.com/articles/what-is-rest
+Resource: https://www.codecademy.com/articles/what-is-rest / https://restfulapi.net/resource-naming/
 
 ---
 ### Characteristics of RESTful APIs
