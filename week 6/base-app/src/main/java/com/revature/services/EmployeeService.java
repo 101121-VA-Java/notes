@@ -88,7 +88,7 @@ public class EmployeeService {
 	 */
 	public Employee addEmployee(Employee e) {
 		// assigning a default manager/role
-		e.setManager(new Employee(0));
+		e.setManager(new Employee(1));
 		e.setRole(Role.BASIC_EMPLOYEE);
 
 		return ed.addEmployee(e);

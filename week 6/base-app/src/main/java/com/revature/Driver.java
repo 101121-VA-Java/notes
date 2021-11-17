@@ -1,28 +1,33 @@
 package com.revature;
 
-import java.util.List;
+import static io.javalin.apibuilder.ApiBuilder.get;
+import static io.javalin.apibuilder.ApiBuilder.path;
+import static io.javalin.apibuilder.ApiBuilder.post;
 
-import com.revature.models.Employee;
-import com.revature.services.EmployeeService;
+import com.revature.controllers.EmployeeController;
 
 import io.javalin.Javalin;
-import io.javalin.http.HttpCode;
 
 public class Driver {
 	
-	private static EmployeeService es = new EmployeeService();
 	
 	public static void main(String[] args) {
 		
 		// Creating an instance of javalin and starting on port 8080
-		Javalin app = Javalin.create().start();
+		Javalin app = Javalin.create( (config) -> {
+				config.enableCorsForAllOrigins();
+				/*
+				 * Enables CORS: Cross Origin Resource Sharing
+				 * 	- protective mechanism built into most browsers 
+				 * 	- restricts resources to be only be allowed by webpages on the same domain
+				 */
+			}).start();
 		
-		app.get("employees", (ctx) ->{
-			List<Employee> employees = es.getEmployees();
-			
-			ctx.json(employees);
-			// implicit
-			ctx.status(HttpCode.OK);
+		app.routes(() -> {
+			path("employees", ()->{
+				get(EmployeeController::getEmployees);
+				post(EmployeeController::registerEmployee);
+			});
 		});
 	}
 
