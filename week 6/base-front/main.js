@@ -72,9 +72,13 @@ function registerEmployee(){
         // check that request was successful
         if( xhr.readyState === 4){
             if(xhr.status === 201){
-                console.log('Employee was successfully added!')
+                console.log('Employee was successfully added!');
             } else{
-                console.log('Employee was not added...')
+                console.log('Employee was not added...');
+                /*
+                    provide user with notification that action was unable to be completed, ie:
+                    document.getElementById("errorDiv").innerHtml = 'invalid info';
+                */
             }
         }
     }

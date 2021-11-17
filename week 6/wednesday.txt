@@ -1,0 +1,36 @@
+Handler groups
+	- Grouping HTTP handlers/setting up path to handle different resources (ie: Pokemons)
+		- app.routes()
+			- can then set up paths (nested paths as well) for the different resources
+				- path("resourceName", () -> {
+						get(//Handling behavior);
+						post(...);
+						path("...")...
+					});
+
+URL - Uniform Resource Locator
+	- Location for where a resource (on a server) is located
+	- URL => protocol + domain name (host + port) + URI + parameters
+ 
+	
+	- URL: https://www.google.com/search?q=java+documentation&rlz=1C1GCEU_enUS924US924&oq=java+documen&aqs=chrome.0.0i433i512j69i57j0i512l5j69i60.4432j0j7&sourceid=chrome&ie=UTF-8
+	
+	- protocol - https://
+	- domain name - www.google.com
+	- URI - search
+		- Uniform Resource Identifier
+			- specifically determines a resource/service requested
+	- parameters (query params)
+		- ?param1=value1&param2=value2...
+		- q=java+documentation
+		- &rlz=1C1GCEU_enUS924US924
+		- &oq=java+documen
+		- &aqs=chrome.0.0i433i512j69i57j0i512l5j69i60.4432j0j7
+		- &sourceid=chrome
+		- &ie=UTF-8
+
+Path param
+	- parameter embedded in the url
+		- resources/{path-param}/{something}
+		- employees/{id}/reimbursements
+	

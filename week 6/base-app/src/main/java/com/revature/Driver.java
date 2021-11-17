@@ -27,6 +27,13 @@ public class Driver {
 			path("employees", ()->{
 				get(EmployeeController::getEmployees);
 				post(EmployeeController::registerEmployee);
+				// use brackets to indicate path param name
+				path("test",() ->{
+					get(EmployeeController::getTest);
+				});
+				path("{id}",() ->{
+					get(EmployeeController::getEmployeeById);
+				});
 			});
 		});
 	}
