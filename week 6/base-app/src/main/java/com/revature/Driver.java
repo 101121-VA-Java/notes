@@ -23,8 +23,18 @@ public class Driver {
 			 * same domain
 			 */
 			config.defaultContentType = "application/json";
-		}).start();
+		});
+		app.start();
 
+		/*
+		 * Headers to tell the browser that the Authorization header that we're using for our "token" 
+		 * in the Response body is safe to use, otherwise the browser may not accept it
+		 */
+		app.before(ctx -> {
+		    ctx.header("Access-Control-Allow-Headers", "Authorization");
+		    ctx.header("Access-Control-Expose-Headers", "Authorization");
+		});
+		
 		app.routes(() -> {
 			// /employees
 			path("employees", () -> {
