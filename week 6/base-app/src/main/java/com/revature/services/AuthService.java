@@ -33,6 +33,7 @@ public class AuthService {
 			/*
 			 *  poor token implementation, for example's sake
 			 *  	- based on this token, a user can be authenticated when making a request
+			 *  	- user-id:role
 			 */
 			token = principal.getId() + ":" + principal.getRole();
 		}
@@ -50,6 +51,7 @@ public class AuthService {
 		/*
 		 * Behavior to identify user from token
 		 */
+		// this indicates that a user is not authenticated
 		if(token == null) {
 			return false;
 		}

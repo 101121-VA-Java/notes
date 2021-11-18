@@ -1,0 +1,52 @@
+- /employees
+	GET - return all employees
+	POST - create a new employee
+	 - /employees?manager-id=[value]
+		GET - return all employees with a specific manager (based on id)
+	 - /employees?username=[value]
+		GET - return all employees with a specific username (in this case, just one)
+	
+- /employees/{id}
+	GET - returning employee with id specified
+	PUT - update employee with that id
+			- FTAL(for this application's logic): this is just for basic information
+				- username, password, name
+		
+- /employees/{id}/admin
+	PUT - update employee with that id
+			- FTAL(for this application's logic): this is just for admin information
+				- Role, manager
+				- needs to have a role of Admin to use this endpoint
+
+- /auth
+	POST - login 
+		- send username/password
+		- retrieve Authorization Header if login was successful
+
+For ERS, endpoint/HTTP verb to create reimbursement?
+	- /reimbursements - POST
+		- JSON representation of reimbursement
+			- field with employee-id
+	- /createANewreimbursementforthisid/{id}
+		- if this was the endpoint, not very intuitive
+
+Authentication
+	- user being who they say they are
+		- ie: login in
+
+Authorization
+	- user has the permission to do something/use some functionality
+
+Query params:
+	- localhost:8080/employees?username=kev&password=kevpass
+		- bad for sensitive information as it's displayed in the url
+
+x-www-form-urlencoded params
+	- localhost:8080/employees
+		- params are hidden in the body of the request
+		- better practice with sensitive information
+
+Group activities:
+	- stand-up
+	- work as a group to define restful endpoints for p1
+		- attach that to your standup notes

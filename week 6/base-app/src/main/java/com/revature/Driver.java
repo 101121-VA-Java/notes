@@ -26,18 +26,24 @@ public class Driver {
 		}).start();
 
 		app.routes(() -> {
+			// /employees
 			path("employees", () -> {
 				get(EmployeeController::getEmployees);
 				post(EmployeeController::registerEmployee);
+				
 				// use brackets to indicate path param name
+				// /employees/{id}
 				path("{id}", () -> {
 					get(EmployeeController::getEmployeeById);
 					put(EmployeeController::updateEmployeeInfo);
+					
+					// /employees/{id}/admin
 					path("admin", () -> {
 						put(EmployeeController::updateEmployeeInfoAdmin);
 					});
 				});
 			});
+			// /auth
 			path("auth", () ->{
 				post(AuthController::login);
 			});
