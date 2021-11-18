@@ -95,11 +95,52 @@ public class EmployeeService {
 	}
 	
 	/**
-	 * Service method to update an employee
+	 * Service method to update an employee's info (ONLY username, password, and name) based on their id
 	 * @param employee object, requires an id and valid field values
 	 * @return true if an employee was updated, else false
 	 */
-	public boolean updateEmployee(Employee e) {
-		return ed.updateEmployee(e);	
+	public boolean updateEmployeeInfo(Employee e) {
+		
+		Employee e_update = ed.getEmployeeById(e.getId());
+		
+		// if name isn't null or the same update the name to a new value
+		if(e.getName() != null && !e.getName().equals(e_update.getName())) {
+			e_update.setName(e.getName());
+		}
+		
+		// if username isn't null or the same update the name to a new value
+		if(e.getUsername() != null && !e.getUsername().equals(e_update.getUsername())) {
+			e_update.setUsername(e.getUsername());
+		}
+		
+		// if password isn't null or the same update the name to a new value
+		if(e.getPassword() != null && !e.getPassword().equals(e_update.getPassword())) {
+			e_update.setPassword(e.getPassword());
+		}
+		
+		return ed.updateEmployee(e_update);	
+	}
+	
+	/**
+	 * Service method to update an employee's admin info (ONLY manager, Role) based on their id
+	 * @param employee object, requires an id and valid field values
+	 * @return true if an employee was updated, else false
+	 */
+	public boolean updateEmployeeInfoAdmin(Employee e) {
+		
+		Employee e_update = ed.getEmployeeById(e.getId());
+		
+		// if manager isn't null or the same update the name to a new value
+		if(e.getManager() != null && !e.getManager().equals(e_update.getManager())) {
+			e_update.setManager(e.getManager());
+		}
+		
+		// if Role isn't null or the same update the name to a new value
+		if(e.getRole() != null && !e.getRole().equals(e_update.getRole())) {
+			e_update.setRole(e.getRole());
+		}
+		
+		
+		return ed.updateEmployee(e_update);	
 	}
 }
