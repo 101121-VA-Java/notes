@@ -1,0 +1,124 @@
+ORM
+	- Object-Relational mapping
+		- converting between incompatible types of objects (Java) and database tables
+
+JPA
+	- Java Persitence API
+		- interfaces meant for the mapping/managing of relational data with Java Objects
+		- "concept" rather than an actual tool
+			- describes which objects should be persisted and how
+			- tools like Hibernate IMPLEMENT JPA
+				- JPA != Hibernate
+
+Hibernate
+	- ORM framework for Java
+		- leverage annotations or xml files to sync java objects with a database
+	- Benefits
+		- Abstraction of JDBC
+			- uses JDBC under the hood
+			- abstracts away SQL queries
+				- abstracts sql dialects(ie: PostgreSQL, OracleSQL, MySQL...)
+					- can reuse the same methods for different dialects
+			- reduces boiler plate code 
+		- Caching
+			- can store query information in the server if reused
+				- can reduce the number of calls to the database
+		- leverages HQL
+			- Hibernate Query Language
+				- dialect specific to hibernate
+			- if desired, native SQL can still be used (bad practice)
+
+Class/Interfaces in Hibernate:
+
+	- Configuration (C)
+		- allowing to define information regarding your connection to your database/hibernate configuration to configure a session factory
+
+		- hibernate.cfg.xml
+			- config file for hibernate
+				- root tag: hibernate-configuration
+			- session factory tag
+				- provide configuration for session factory
+					- db info:
+						- username/password
+						- dialect - PostgreSQL
+						- url
+						- dialect...
+					- hbm2ddl.auto
+						- CREATE
+							- drop all existing tables and objects with names provided in your application and recreate the schema
+						- UPDATE
+							- doesn't drop anything, but adds to the schema if needed
+						- VALIDATE
+							- makes sure that the schema is expected as defined in your application
+						- NONE
+							- hibernate doesn't do ddl
+						- etc... 
+		- Object mapping in Hibernate (xml or annotation based)
+			- xml
+				- create a file: EntityName.hbm.xml
+					<hibernate-mapping>
+						<class name="com.revature.models.ClassName" table="entities">
+							<id name="entityId" column="entity_id"><generator class="increment"/></id>
+							<property name="entityProperty" column="entity_property"></property>
+						</class>
+					</hibernate-mapping>	
+				- in hibernate.cfg.xml
+					- <mapping resource="EntityName.hbm.xml"></mapping>
+			- annotation
+				- <mapping class="com.revature.models.ClassName"></mapping>	
+				- in the class, use JPA imported annotations to map a class
+					- @Entity: must go at the top of the class to be mapped to a table
+					- @Table: allows us to name a table to a different name than the class if desired
+						- @Table(name="entities")		
+	- SessionFactory (I)
+		- Heavy resource
+		- Singleton in charge of creating session object using a factory design pattern
+	- Session (I)
+		- represents database connection
+	- Transaction (I)
+		- manages ACID compliant transactions
+		- retrieved from Session object
+			- .beginTransaction()
+				- commit();
+				- rollback();
+	- Query (I)
+		- used to write more complex CRUD operations using HQL
+	- Criteria(I)
+		- used to programmatically write complicated SELECT statements
+
+Lazy loading vs Eager fetching
+	- when fetched eagerly, the entire object is retrieved as soon as the "parent" object is retrieved
+		- ie: if a reimbursement is retrieved, the Employee associated with that reimbursement is also loaded into our application
+	- when fetched lazily, a proxy is retrieved until that object is used in the session
+		- ie: if a reimbursement is retrieved, the employee associated with that reimbursement is loaded as a proxy until used explicitely in the session
+			- proxy: a dummy object/empty object aside from its unique identifier	
+
+DAO/CRUD methods (These are common interview questions, for more info checkout the documentation)
+	- .get() vs .load()
+		- used to retrieve records from the database
+		- get:
+			- eager fetching
+			- return null when getting an id not in the db
+		- load
+			- lazily fetches an object
+			- throw an exception if it doesn't exist in the database
+	- .update() vs merge()
+		- update:
+			- void return
+			- if trying to updat an object with no id in db, throws an exception
+			- if a persistent object in the same session has the same id, throws an exception
+		- merge:
+			- returns the merged object
+			- if a persistent object in the same session has the same id, merges with the persistent object
+
+
+
+
+
+
+
+
+
+
+
+
