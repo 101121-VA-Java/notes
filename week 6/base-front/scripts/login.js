@@ -1,6 +1,14 @@
+// retrieving token from session storage if it exists
+let token = sessionStorage.getItem("token");
+
+// if no token is present, redirect to the login page
+if (token) {
+   window.location.href = "../index.html";
+}
+
 document.getElementById("submitButton").addEventListener("click", login);
 
-let api1 = "http://localhost:8080/auth";
+let apiUrl = "http://localhost:8080";
 
 function login(){
     // resetting error div
@@ -12,7 +20,7 @@ function login(){
 
     let xhr = new XMLHttpRequest();
     
-    xhr.open("POST", "http://localhost:8080/auth");
+    xhr.open("POST", `${apiUrl}/auth`);
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 200){

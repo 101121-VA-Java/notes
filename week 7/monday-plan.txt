@@ -1,0 +1,90 @@
+Monday plan
+	- Take QC survey
+	- New person joining our batch
+	- Finish up Hibernate
+	
+	- Share study guide for the past week (+)
+	- stand-ups
+Tuesday
+	- little Hibernate hands-on exercise
+		- ie: 
+			- map this class using hibernate
+			- write daos using different hibernate ways/methods
+	- stand-ups
+
+
+Wednesday
+	- "self-study time"
+
+Monday (11/29)
+	- RevPro Quiz
+	- 1-o-1s
+	- Hackerrank
+
+Tuesday (11/30)
+	- QC (2pm ET)
+
+Hibernate - continued
+
+Object states in Hibernate(very popular interview question)
+	- transient
+		- an object is not associated with the database
+			- new Object();
+	- persisted
+		- object associated with a session and matches what is found in the database
+			- use a method to persist an object
+	- detached
+		- object persisted is represented in the database but is no longer associated with a session
+			- session.close()
+
+Native queries
+	- writing plain SQL, NativeQuery<T>
+	- not best practice
+		- tight coupling with a specific SQL dialect
+
+HQL
+	- Hibernate Query Language
+	- more OO way to query data compared to SQL
+		- not dialect dependent
+	- paired with Query<T>
+
+
+Named Queries
+	- define a query to used in the model/entiry
+	- could be used in a project when the architecture is not separated by layers, would be easy to find
+
+
+Criteria API
+	- Java-based way to programmatically query data in a more OO way
+		- DQL
+
+Caching
+	- "storing for quicker access"
+	- stores the result of a query from the dabatase to save time
+		- "buffer memory" that lies between the app and the database
+	- Types of caching
+		- L1 - Level 1
+			- session level
+			- automatic and mandatory
+				- if multiple updates are made onto an object within a session, hibernate will delay the actual update as long as possible in order to 				reduce the number of statement made.
+			- closing the session causes that information to be lost
+		- L2 - Level 2
+			- SessionFactory level
+				- lasts for the lifetime of an application
+			- optional
+				- needs to leverage 3rd party for session factory level caching
+					- ie: ehcache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
