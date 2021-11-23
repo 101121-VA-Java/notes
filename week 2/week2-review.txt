@@ -7,7 +7,7 @@
 5.	What are the primitive data types in Java?
 6.	Where are Strings stored?
 7.	Explain stack vs heap
-	1.	Are variable references stored on the stack or heap? What about the objects they refer to?
+	1. Are variable references stored on the stack or heap? What about the objects they refer to?
 8.	What are annotations?
 9.	Why are strings immutable in java? How would you make your own objects immutable?
 10.	What is the difference between String, StringBuilder, and StringBuffer?
@@ -30,7 +30,7 @@
 ## OOP
 1.	What are the 4 pillars of OOP? Explain each and give examples of you implement them in Java code
 2.	What is the difference between an abstract class and an interface?
-3.	Can abstract methods have concrete methods? Can concrete (non-abstract) classes have abstract methods?
+3.	Can abstract classes have concrete methods? Can concrete (non-abstract) classes have abstract methods?
 4.	Can static methods access instance variables? Can non-static methods access static variables?
 5.	What are the implicit modifiers for interface variables? methods?
 6.	What is the difference between method overloading and overriding? What are the rules for changing the method signature of overloaded methods?
