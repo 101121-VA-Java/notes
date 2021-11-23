@@ -218,12 +218,42 @@ class EmployeePostgres implements EmployeeDao {
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-
+		
 		if (rowsChanged > 0) {
 			return true;
 		}
 		
 		return false;
+	}
+
+	@Override
+	public List<Employee> getManagers() {
+		List<Employee> employees = new ArrayList<>();
+
+		try (Connection c = ConnectionUtil.getConnection()) {
+			String sql = "select * from employees where e_role = 'ADMIN' or e_role ='MANAGER';";
+
+			Statement s = c.createStatement();
+			ResultSet rs = s.executeQuery(sql);
+
+			while (rs.next()) {
+				// Retrieving employee info, setting manager's value to another Employee dummy object with only its id
+				Employee e = new Employee(
+						rs.getInt("e_id"), 
+						rs.getString("e_name"), 
+						rs.getString("e_username"),
+						rs.getString("e_password"), 
+						Role.valueOf(rs.getString("e_role")),
+						new Employee(rs.getInt("m_id")));
+
+				// Adding employee to employees list to be returned
+				employees.add(e);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return employees;
 	}
 
 

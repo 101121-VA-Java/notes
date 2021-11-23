@@ -7,6 +7,8 @@ import com.revature.models.Employee;
 public interface EmployeeDao {
 
 	List<Employee> getEmployees();
+	
+	List<Employee> getManagers();
 
 	List<Employee> getEmployeesByManagerId(int id);
 

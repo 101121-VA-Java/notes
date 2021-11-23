@@ -42,4 +42,10 @@ public class EmployeeHibernate implements EmployeeDao{
 		return false;
 	}
 
+	@Override
+	public List<Employee> getManagers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

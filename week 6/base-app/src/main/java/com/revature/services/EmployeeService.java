@@ -39,6 +39,20 @@ public class EmployeeService {
 	}
 	
 	/**
+	 * Service method to retrieve all managers, sets the employee passwords to null before returning them
+	 * @return a List of Employees or an empty list if none are found
+	 */
+	public List<Employee> getManagers(){
+		List<Employee> employees = ed.getManagers().stream()
+				.map(e -> {
+					e.setPassword(null); 
+					return e;})
+				.collect(Collectors.toList());
+		
+		return employees;
+	}
+	
+	/**
 	 * Service method to retrieve employees by a manager id, sets the employee passwords to null before returning them
 	 * @param id of the manager employee
 	 * @return a List of Employees or an empty list if none are found
@@ -139,8 +153,7 @@ public class EmployeeService {
 		if(e.getRole() != null && !e.getRole().equals(e_update.getRole())) {
 			e_update.setRole(e.getRole());
 		}
-		
-		
+
 		return ed.updateEmployee(e_update);	
 	}
 }

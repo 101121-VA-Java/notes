@@ -1,41 +1,23 @@
 // retrieving token from session storage if it exists
 let token = sessionStorage.getItem("token");
 
+
 let nav_right = document.getElementById("nav-right");
+let nav_left = document.getElementById("nav-left");
 
-
-// if no token is present, redirect to the login page
 if (token) {
    let tokenArr = token.split(':');
    let id = tokenArr[0];
    let role = tokenArr[1];
 
-   let nav_right = document.getElementById("nav-right");
-   let li = document.createElement('li');
-   li.setAttribute('class', 'nav-item');
-   let a = document.createElement('a');
-   a.setAttribute('class', 'nav-link');
-   a.setAttribute('href', '#');
-   a.innerHTML = 'Logout';
+   if(role === 'MANAGER' || role === 'ADMIN'){
+   createNavElement('Employees', nav_left, '/views/employees.html', null);
+   } 
 
-   a.addEventListener('click', logout);
-
-   li.appendChild(a);
-   nav_right.appendChild(li);
-
-   console.log(tokenArr);
+   createNavElement('Info', nav_right, null, null);
+   createNavElement('Logout', nav_right, null, logout);
 } else {
-   // let nav_right = document.getElementById("nav-right");
-   // let li = document.createElement('li');
-   // li.setAttribute('class', 'nav-item');
-   // let a = document.createElement('a');
-   // a.setAttribute('class', 'nav-link');
-   // a.setAttribute('href', 'views/login.html');
-   // a.innerHTML = 'Login';
-
-   // li.appendChild(a);
-   createNavElement('Login', nav_right, 'views/login.html', null);
-   nav_right.appendChild(li);
+   createNavElement('Login', nav_right, '/views/login.html', null);
 }
 
 function logout() {

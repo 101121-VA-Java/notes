@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"><img src="../images/revature-logo.png" style="height: 2.5em;"></a>
+        <ul class="navbar-nav mr-auto" id="nav-left">
+        </ul>
+        <ul class="navbar-nav navbar-right" id="nav-right">
+        </ul>
+
+    </nav>
+    <main class="container-fluid mx-auto " style="padding: 0 7.5em;">
+        <br>
+        <div class="btn-group btn-group-toggle d-flex justify-content-center" data-toggle="buttons">
+            <label class="btn btn-outline-secondary active" id="option1">
+                <input type="radio" name="options" checked> All Employees
+            </label>
+            <label class="btn btn-outline-secondary" id="option2">
+                <input type="radio" name="options"> My Employees
+            </label>
+        </div>
+        <br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Manager id</th>
+                </tr>
+            </thead>
+            <tbody id="employee-tbody">
+
+            </tbody>
+        </table>
+
+        <div class="modal fade" id="updateEmployeeModal" tabindex="-1" role="dialog"
+            aria-labelledby="updateEmployeeModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" > <span id="modal-employee-id">Employee id</span> : <span id="modal-employee-name">Employee Name</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container align-content-center" id="loginForm">
+                            <form style="padding-top: 2.5em;">
+                                <div class="form-row justify-content-center">
+                                    <label>Manager:</label>
+                                </div>
+                                <div class="form-row justify-content-center">
+                                    <select class="form-control form-group col-md-5" id="employee-manager" name="manager">
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-row justify-content-center">
+                                    <label>Role:</label>
+                                </div>
+                                <div class="form-row justify-content-center">
+                                    <select class="form-control form-group col-md-5" id="employee-role" name="role">
+                                        <option value="BASIC_EMPLOYEE">Basic Employee</option>
+                                        <option value="MANAGER">Manager</option>
+                                        <option value="ADMIN">Admin</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-row justify-content-center">
+                                    <div style="color:red;" id="error-div"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" id='update-button'>Update</button>
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-light text-center fixed-bottom">
+        <div class="text-center p-3">
+            101121-JavaExt.
+        </div>
+    </footer>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/employees.js"></script>
+</body>
+
+</html>

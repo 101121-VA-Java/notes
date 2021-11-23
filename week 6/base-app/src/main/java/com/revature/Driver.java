@@ -43,6 +43,9 @@ public class Driver {
 				
 				// use brackets to indicate path param name
 				// /employees/{id}
+				path("managers", () -> {
+					get(EmployeeController::getManagers);
+				});
 				path("{id}", () -> {
 					get(EmployeeController::getEmployeeById);
 					put(EmployeeController::updateEmployeeInfo);

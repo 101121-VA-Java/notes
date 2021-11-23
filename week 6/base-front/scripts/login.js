@@ -3,7 +3,7 @@ let token = sessionStorage.getItem("token");
 
 // if no token is present, redirect to the login page
 if (token) {
-   window.location.href = "../index.html";
+   window.location.href = "/index.html";
 }
 
 document.getElementById("submitButton").addEventListener("click", login);
@@ -33,7 +33,7 @@ function login(){
             sessionStorage.setItem("token", authToken);
 
             // navigate to a different view (ie: homepage)
-            window.location.href="../index.html";
+            window.location.href="/index.html";
 
         } else if (xhr.readyState === 4){
             // provide user with feedback of failure to login
