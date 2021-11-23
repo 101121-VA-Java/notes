@@ -1,0 +1,12 @@
+Hibernate Exercise:
+	- Building upon our Hibernate example, the Employee class has been mapped using annotations.
+	In Hibernate, relationships between entities can be illustrated using annotations defining their multiplicity:
+		- @ManyToOne, @OneToMany...
+			- Take a look at the Employee model for an example
+	- In your group, implement the EmployeeHibernate class methods using Hibernate.
+	- Application Set up:
+		- The project has been changed to use h2 instead of a PostgreSQL database, meaning no need to change any credentials.
+		- Once the project has been imported into your workspace, run a Maven update and you should be able to run the application.
+		- The main method has a sequence to commands to show if the methods have been implemented
+			- since they are called in sequence, do implement them in order 
+	- While you can work together, everyone should upload a version to their repository on GitHub

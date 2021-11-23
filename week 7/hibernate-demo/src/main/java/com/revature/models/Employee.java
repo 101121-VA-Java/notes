@@ -1,9 +1,23 @@
 package com.revature.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="employees")
 public class Employee {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "e_id")
 	private int id;
 	private String name;
+	@ManyToOne
 	private Department department;
 	public Employee() {
 		super();
