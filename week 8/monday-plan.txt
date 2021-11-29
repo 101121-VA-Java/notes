@@ -1,8 +1,8 @@
 Monday Plan
 	- QC Survey
-	- 10:10am - 10:30am
+	- 10:10am - 11:30am
 		- RevPro quiz 
-	- 10:30am - 1pm  
+	- 11:30am - 1pm  
 		- Lecture + Setup
 			- Node.js & npm
 	- afternoon
@@ -17,3 +17,32 @@ Monday Plan
 		- Patience, Albert, David, Hannah
 		- Jeremy, Gerardo, Bezza, Peter
 		- Alex, Brayden, Dean, Davey
+
+Installation
+	- scoop
+		- scoop install nodejs
+			- includes npm
+	- website
+		- https://nodejs.org/en/download/
+
+Node.js
+	- open-source, cross-platform JavaScript runtime environment
+		- execute JS code outside of the browser
+	- Allows to use JS for every tier of a webapplication
+		- ie: JS backend
+
+
+Node Package Manager (npm)
+	- included with the installation of node.js
+	- One of the world's largest software registry
+		- free to use
+	- 3 main components
+		- website: discover packages, navigate...
+		- CLI tool: npm command in terminal
+		- registry: database of JS software available for download
+	- npm init
+		- initializes a new JS project
+			- generates the package.json file
+				- like the pom.xml
+					- allows us to list our dependencies used
+					- allows us to add any information about our project
