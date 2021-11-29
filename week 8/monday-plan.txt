@@ -1,0 +1,19 @@
+Monday Plan
+	- QC Survey
+	- 10:10am - 10:30am
+		- RevPro quiz 
+	- 10:30am - 1pm  
+		- Lecture + Setup
+			- Node.js & npm
+	- afternoon
+		- stand-up
+		- mock interview(Hibernate/Javalin/Rest)
+			- push to common repository
+		- Hackerrank as group
+			- https://www.hackerrank.com/1011javakevinweek8
+		
+	- Groups
+		- Sam, Kendrick, Jason, Tricia
+		- Patience, Albert, David, Hannah
+		- Jeremy, Gerardo, Bezza, Peter
+		- Alex, Brayden, Dean, Davey
