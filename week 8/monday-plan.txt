@@ -11,7 +11,9 @@ Monday Plan
 			- push to common repository
 		- Hackerrank as group
 			- https://www.hackerrank.com/1011javakevinweek8
-		
+		- set up Angular
+			- node, npm, angular/cli	
+				- https://angular.io/guide/setup-local
 	- Groups
 		- Sam, Kendrick, Jason, Tricia
 		- Patience, Albert, David, Hannah
@@ -46,3 +48,84 @@ Node Package Manager (npm)
 				- like the pom.xml
 					- allows us to list our dependencies used
 					- allows us to add any information about our project
+	- node_modules
+		- folder that contains all of the dependencies required for an npm project
+			- after cloning/pulling an npm project, run npm install to download the required dependencies
+		- good practice is to add the node_modules foler to a .gitignore
+			- otherwise all of the dependencies are also pushed to GitHub
+		- managed by npm
+			- add dependency using npm install
+			- remove dependency using npm uninstall
+	- package-lock.json
+		- specifies the exact version of the dependencies and required subdependencies so that the project is 100% reproducible
+
+
+TypeScript
+	- made by Microsoft
+		- https://www.typescriptlang.org/docs/handbook/2/basic-types.html
+	- Superset of JS
+		- all JavaScript is valid TypeScript
+			- anything you can do in JS, can be done in TS
+	- features
+		- static typing
+		- compile/transpile time check
+		- interfaces
+		- access modifiers
+		...
+	- more OOP JS
+	- Cannot be ran in a browser
+		- has to be transpiled into JS
+	- installing TS
+		- npm -g install typescript
+			- (-g) flag indicates a global installation rather than project specific
+	- tsc
+		- command that can be used to transpile .ts files to .js files
+		- by default it uses a JS version < ES5
+			- use --target flag to specify a js version
+			- tsc --target es6 [script].ts
+	- types
+		- all of JS types
+		- TS specific
+			- any
+			- void
+			- never
+			- enums
+			- tuple
+	- access mods
+		- public by default
+		- private
+		- protected
+	- non-access mods
+		- readonly
+	- interfaces
+		- we're going to use those for type checking
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
