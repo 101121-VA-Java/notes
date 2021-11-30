@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    background-image: linear-gradient(45deg, black 0%, white 50%, black 100%);
+    padding: 1em;
+    font-family: sans-serif;
+}
+
+body{
+    padding: 0;
+    width: 50em;
+    margin:auto;
+    background-color: white;
+    border: 2px solid black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,123 @@
+Angular
+	- front-end framework
+	- used to make dynamic, single page applications
+		- SPA - Single Page Application
+			- design pattern
+			- load all of the static resources at once
+				- instead of reloading the webpage with another html view
+					- inject/remove views and functionality on A webpage rather than requesting a whole new one
+						- components
+							- basic building blocks of Angular
+		- DI - Dependency Injection 
+			- design pattern
+			- relying on a framework to provide instances of dependencies rather than creating them ourselves
+				- in this case, dependencies refer to objects that our code needs to run properly
+			- Abstract away implementation details
+	- Angular.js vs Angular
+		- Angular.js
+			- first iteration of Angular
+			- using js
+		- Angular
+			- any version after Angular.js
+			- using ts
+	- Powerful CLI (command line interface)
+		- ng new [app-name]
+		- ng serve
+			- "serves" our project locally on port 4200 by default
+			- --open flag (to open the browser automatically)
+		- ng test
+			- runs protractor and jasmine tests (spec.ts)
+		- ng build
+			- builds/package the application as an artifact to be deployed
+			- Webpack
+				- resource bundler which prepares the application during development/builds
+					- bundle refers to a file that incorporates files that belong together
+						- served to the client in one singular file request
+		- ng generate [component | service | module | pipe | ... ] [name]
+			- ng g [ c | s | ...] [name]
+
+	- Project set up
+		- angular.json
+			- angular application settings
+		- tsconfig.json
+			- typescript setting (ie: transpiling target)
+	- Decorators
+		- "fancy functions" that provide metadata as parameters
+		- Types
+			- class, method, property, parameter...
+		- In Angular, each of the main "elements" has their own decorator
+			- @Component
+			- @NgModule
+			- @Injectable for services
+			- @Pipe
+	- Components
+		- Building block of Angular, used to design the webpage
+			- a webpage is built by combining components together
+		- when generated, a component is made up of 4 files
+			- html - view
+			- css - styling
+			- ts - functionality
+			- spec.ts - testing
+		- @Component decorator
+			- selector
+				- how to reference the component elsewhere
+			- template
+				- html "template"
+			- style
+				- styling for that component
+	- Modules
+		- groups of related components
+		- at least one module
+			- by default AppModule, which is the root module
+				- convention, can be renamed if desired
+		- @NgModule
+			- decorator for modules
+				- defines 4 properties
+					- declarations - to declare components associated with the module
+					- imports - to import additional modules
+					- providers - define services associates with the module
+					- bootstrap - define the root component for the module
+	- Routing 
+		- allows us to swap components dynamically based on the url-path
+		- routing module
+			- contains predefined routes
+				- maps component to url paths
+		- define paths to navigate to using routerLink attribute
+			- ie: routerLink = ''
+			- IMPORTANT:
+				- do not use href attribute, or it will reload the page.
+		- <router-outlet></router-outlet>
+			- where the component is going to be injected
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

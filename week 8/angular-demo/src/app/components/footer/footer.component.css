@@ -1,0 +1,12 @@
+footer{
+    background-color: gray;
+    height:4em;
+    text-align: center;  
+    margin-top: auto;
+}
+
+footer div{
+    margin: 0;
+    padding: 1.5em;
+    color:white;
+}
