@@ -1,0 +1,71 @@
+installing bootstrap on Angular
+	- npm install bootstrap
+	- add the path to the dependency ("node_modules/bootstrap/dist/css/bootstrap.min.css") in styles in the angular.json
+
+Databinding
+	- way to communicate between the HTML/DOM and the application state (typescript)
+		- way to keep the view up to date based on the state of the application
+	One-way databinding
+		- String interpolation
+			- display data to the view
+			- from ts file -> html document
+			- someVar: string = 'Kevin' in the component's ts file
+			- {{someVar}} in the html document to display the value of the variable
+		- EventBinding
+			- assign functionality to an event
+			- from html document -> ts file
+			- doSomething() {...} in the ts file
+			- <someTag (event)='doSomething()'> </...>
+		- Attribute/Property Binding
+			- assigning a value to an attribute/property of an html element
+			- from ts file -> html document
+	Two-way databinding
+		- both ways from html document <-> ts file
+		- import FormModule
+		- someVar:string = 'Kevin'; in ts file
+		- <input [(ngModel)]='someVar' /> in html document
+
+Directives
+	- classes that add behaviors to elements in Angular application
+		- angular has certain built-in directives to be leveraged
+	- Component
+		- html tag that refers to a component
+		- <app-someComponent></app-someComponent>
+	- Structural
+		- directives used to interact with the DOM
+			- create elements, display elements...
+		- *ngIf, *ngFor...
+	- Attribute
+		- directives used to change the looks/behaviors of DOM elements/ components
+			- can generate custom directives
+				- @Directive decorator
+		- ngStyle, ngClass, ngModel
+		
+Pipes
+	- used to transform/display data in the view
+		- don't actually change the data itself, only the way it's displayed
+		- ie: uppercase/lowercase
+			- date formatting
+			- currency
+	- used in conjunction with String Interpolation {{value | pipeName}}
+	- custom pipes
+		- ng g pipe pipename
+			- @Pipe decorator which has the name of the pipe
+			- implement transform()
+				- specifies the pipe behavior
+			
+Services
+	- Angular Entities used to reuse code/logic that could be reusable
+		- ie: making an API call (HTTP request)
+	- services are injected into other classes (components, services...)
+		- via the constructor
+			constructor(private cal: CalculatorService) { }
+		- services are injected using Dependency Injection
+			- different types of injectors are available
+				- root: service is a singleton/ one per application
+				- module: service is reused within a module
+				- component: 1 service per component
+	- @Injectable decorator
+		@Injectable({
+  			providedIn: '[type-of-injector]'
+		})

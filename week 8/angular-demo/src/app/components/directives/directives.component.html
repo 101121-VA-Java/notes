@@ -1,0 +1,13 @@
+<h3>Directives</h3>
+<button (click)='changeBoolean()'>Click me!</button>
+<p *ngIf='someBoolean'>someBoolean is true!</p>
+<p *ngIf='!someBoolean'>someBoolean is false!</p>
+<hr>
+<h3>Employees:</h3>
+<ul>
+    <li *ngFor = 'let name of employees'>
+        {{name | excitedPipe}}
+    </li>
+</ul>
+
+<p [ngStyle] = 'styles'>ngStyle: attribute directive</p>

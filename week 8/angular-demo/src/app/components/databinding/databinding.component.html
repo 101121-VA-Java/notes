@@ -1,0 +1,11 @@
+<h3>Databinding</h3>
+
+<p>Displaying a value dynamically: <b>{{someVar}}</b></p>
+<p>Please enter some text:</p>
+<input [(ngModel)] = 'someVar'>
+<hr>
+<h4>The count is currently: <b [class]='countColor'>{{count}}</b></h4>
+
+<h4>The important var from the Service: {{i}}</h4>
+
+<button (click)='increment()'>Do Something</button>

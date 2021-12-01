@@ -8,6 +8,10 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { TtaalComponent } from './components/ttaal/ttaal.component';
+import { DatabindingComponent } from './components/databinding/databinding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './components/directives/directives.component';
+import { ExcitedPipePipe } from './pipes/excited-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { TtaalComponent } from './components/ttaal/ttaal.component';
     NavComponent,
     FooterComponent,
     HomeComponent,
-    TtaalComponent
+    TtaalComponent,
+    DatabindingComponent,
+    DirectivesComponent,
+    ExcitedPipePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
