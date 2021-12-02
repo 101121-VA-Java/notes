@@ -1,0 +1,10 @@
+<h3>Pokehome Component</h3>
+<p>
+    We will get user input from this component and pass the information to the children component(a component nested within another) to display our Pokemon
+</p>
+<input #pokemonId>
+<!--Passing in the input tag value directly in the function assigned the button-->
+<button (click)='getPokemon(pokemonId.value)'>Get Pokemon!</button>
+<!--property binding to bind the pokemon property in the child to the pokemon property of the parent.-->
+<app-pokemon [pokemon]='pokemon'></app-pokemon>
+

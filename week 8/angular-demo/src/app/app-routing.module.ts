@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { HomeComponent } from './components/home/home.component';
+import { PokehomeComponent } from './components/pokehome/pokehome.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { TtaalComponent } from './components/ttaal/ttaal.component';
 
 const routes: Routes = [{
@@ -17,6 +19,9 @@ const routes: Routes = [{
 }, {
   path: 'directives',
   component: DirectivesComponent
+}, {
+  path: 'pokemon',
+  component: PokehomeComponent
 }];
 
 @NgModule({

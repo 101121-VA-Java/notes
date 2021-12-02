@@ -1,0 +1,49 @@
+Pokehome Component
+	- used to retrieve pokemon information from pokeapi using user input (capture pokemon id)
+		- https://pokeapi.co/api/v2/pokemon/
+		- HTTP request
+			- Http Method/Verb
+				- GET
+			- Url
+				- https://pokeapi.co/api/v2/pokemon/{pokemon-id}
+			- Body
+				- no body required
+			- headers
+				- no headers required
+		- Need to parse that information
+			- we're going to retrieve JSON
+			- need to map to a usable TS object
+				- id
+				- name
+				- sprites[]
+		- Pass the pokemon data to the Pokemon component
+			- We could have everything on the same component
+				- but for demo's sake we're passing data between components
+		
+Pokemon Component
+	- Display pokemon information:
+		- id, name, sprites
+	- Databinding/ Directives to display data
+
+Models
+	- classes/interfaces for data/object to be received
+		- for this example we'll be using an interface since we don't need to intstantiate any pokemons
+	- not required, but they make working with JSON data easier
+
+Making HTTP calls in Angular
+	- import HttpClientModule in the app.module
+		- gives access to HttpClient
+	- HttpClient allows us to make HttpRequests
+	- returns an Observable
+		- stream of data returned from an async http call
+		- follow a publisher/subscriber model/design pattern
+			- any entity that is subscrived to the the observable can retrieve the information
+			- lazy, which means that the http call is only made when the observable is subscribed
+	- .pipe - allows us to return an Observable
+	- .map - allows us to "map" a JSON object to an interface (Pokemon)
+	- https://angular.io/guide/http
+
+@Input/@Output
+	- decorator in order to pass information between a parent and a child components
+	- EventEmitter in order to emit custom asynchronously between our components
+	- https://angular.io/guide/inputs-outputs

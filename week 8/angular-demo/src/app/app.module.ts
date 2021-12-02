@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { DatabindingComponent } from './components/databinding/databinding.compo
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { ExcitedPipePipe } from './pipes/excited-pipe.pipe';
+import { PokehomeComponent } from './components/pokehome/pokehome.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ExcitedPipePipe } from './pipes/excited-pipe.pipe';
     TtaalComponent,
     DatabindingComponent,
     DirectivesComponent,
-    ExcitedPipePipe
+    ExcitedPipePipe,
+    PokehomeComponent,
+    PokemonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
