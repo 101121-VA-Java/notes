@@ -1,0 +1,116 @@
+Exercise due Monday 2pm:
+	- Angular tour of heroes:
+		- https://angular.io/tutorial
+		- push to GitHub Repo  
+Checkout APIs to get inspiration for p2
+	- https://github.com/public-apis/public-apis
+QC Monday 2pm
+	- Angular
+	- SDLC
+
+1o1s Monday Morning
+	- Quiz
+
+SDLC
+	- Software Development Life Cycle
+	- Process of planning, creating, testing and displaying an information system
+	- General steps/ phases:
+		- Requirement phase
+			- evaluate the current system and identify deficiencies
+			- meetings with client/ share holders... eliciting requirements
+				- done by Business Analysts(BAs)
+		- Analysis phase
+			- Requirements are going be to defined
+				- particular defiencies in the system and a proposal is made
+				- Senior Dev/Architect and BAs
+		- Design phase
+			- Proposed system is designed and product features are planned out
+			- no coding
+		- Development phase
+			- Software is actually built
+			- code is written
+		- Testing phase
+			- Software is tested to ensure desired functionality
+			- testing team
+		- Deployment/maintenance phase(s)
+			- product is delivered to the customer
+			- maintenance is kept up
+
+Waterfall model
+	- traditional model, linear/sequential cycle
+	- each phase must be completed before the next phase begins/ no overlapping of the phases
+		- inflexible, aka, no going back up
+	- Advantages
+		- well fleshed out requirements/documented
+		- well defined timeline, stable product definition
+		- most successful with small scale projects
+	- Disadvantages
+		- Cannot accomodate well for stakeholder feedback
+			- inflexible
+		- no coding until way later in the lifecycle
+		- poor model for long-ongoing project
+
+Agile
+	- Approach to SDLC based on iterative and incremental development with a focus on customer satisfaction and rapid delivery of software product
+		- breaking down the product into small incremental builds, provided in iterations, each iteration involving cross functional teams working simultaneously
+	- a philosophy/mindset
+		- https://agilemanifesto.org/
+		- Individuals and interactions over processes and tools
+		- Working software over comprehensive documentation
+		- Customer collaboration over contract negotiation
+		- Responding to change over following a plan
+
+Terminology
+	- User story
+		- individual feature/requirement for a project
+	- Epic
+		- group of related user stories that make up a big feature
+	- Story point
+		- level of difficulty assigned to a user story
+			- can be based on perceived time to be spent on it
+	- Sprint
+		- specified timeline for an iteration (2 weeks to a month)
+
+Scrum
+	- Agile framework/ implementation of Agile
+	- Artifacts(documents)
+		- Product Backlog
+			- List of everything that is known to be needed in the product/ list of requirements /features
+			- Managed by the product owner
+		- Sprint Backlog
+			- Set of product backlog items selected for a sprint
+	- Scrum team
+		- usually 5-9 members
+		- Product Owner
+			- responsible for the product resulting from the dev team
+			- resonsible for managing the product backlog
+		- Development Team
+			- devs/QA 
+		- Scrum master
+			- Facilitator to the scrum dev team
+			- clarifies questions, organize activities...
+	- Ceremonies (meetings) 
+		- https://www.myagilepartner.com/blog/wp-content/uploads/2018/10/sprint-scrum-1-e1538431497335.jpg
+		- Sprint Planning
+			- meeting to plan the work to done during a sprint
+			- collaboration of the whole Scrum team
+				- assign features/ story pointing(assign story points to user stories)
+			- ~ 2 hours per week of the sprint
+		- Daily Scrum(Daily standups) 
+			- Daily meeting for the dev team
+			- to check on the progress
+				- what did you do yesterday?
+				- what did you do today?
+					- includes struggles
+				- Any blockers?
+					- blocker: not being able to do work due to someone else's
+			- ~15 minutes
+		- Sprint Review
+			- Demo of the product resulting from the sprint, "working software"
+			- Scrum team and stake holders collaborate on inspecting what was done and update the product backlog as required
+				- maybe rework a feature
+		- Sprint Retrospective
+			- Scrum team reviews how the sprint went, and create a plan for improvement for the next sprint
+	- Burndown chart
+		- graph displaying the progress over the course of a sprint
+		- Story point remaining vs time
