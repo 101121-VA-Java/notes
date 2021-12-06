@@ -1,0 +1,35 @@
+Team names + Team lead (team lead will act as scrum master for the team and run standups) + a team member responsible for managing gitflow (this can be the team lead or another team member)
+Topic proposal with 10-15 user stories (Topic should demonstrate multiple user roles and leverages other APIs like Google Maps, Spotify, et cetera…)
+Each team must create a document in the Project 2 Proposals Folder with this information and review it with a trainer before moving forward.
+
+Team Members: Gerardo Barnett, Tricia Goodwin, Jeremy Steinhafel & David Wysocki
+Team Name: Scrumbob
+Team Lead/ Scrum Master: David
+
+
+Project Idea: Odds of winning a Card Game.
+
+User Stories:
+	
+Users can have a betting balance
+Users can log in 
+Users can see the odds of winning at any stage of the game
+Users can create a profile with a preferred game
+Users can select the game
+Users can enter specific cards in their hand or randomly dealt
+Users can customize other player's hands in the game
+Dealer can see their odds at any stage of the game
+Dealer can abide by all dealer rules during the game
+Dealer can reshuffle the cards at the end of the game
+Texas Hold em: Users can input the river, flop, and turn cards. 
+User can view chart to see their odds.
+
+API checked on Postman to check deck creator:
+https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
+
+
+
+
+
+
+
