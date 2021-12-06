@@ -1,0 +1,16 @@
+Monday plan -
+	- QC survey
+	- RevPro Quiz - 10:15am 
+		- Closes at 2pm ET
+	- 1-o-1s
+		- Jason, Kendrick, Tricia, David
+		- Jeremy, Albert, Hannah, Alex
+		- Davey, Brayden, Patience, Sam
+		- Bezza, Gerardo, Dean 
+	- Angular tour of heroes
+		- push to repository by 2pm ET
+	- QC
+		- Angular/SDLC 2pm ET
+
+	- Kevin Meeting 12-12:30pm ET
+
