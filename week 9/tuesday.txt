@@ -1,0 +1,179 @@
+Scrum -
+	- Sprint Planning
+		- Next couple days
+		- User Stories
+			- Assigning points
+		- Set up repositories(+push permissions(ie: not allow teammembers to push to main))
+			- requiring review before push
+		- ERD
+			- Is the database normalized
+			- Are we using the right multiplicity between our entities
+			- Is our project extensible?
+				- how easy is it to build upon it
+					- ie: adding search/filter features
+		- Set up burndown chart
+		- write it down
+	- Daily Stand Ups
+		- doing daily
+			- push to common repository
+	- Sprint Review
+		- every friday (12/10, 12/17)
+			- Every group gets 7-8 minutes to talk about what they've achieved so far
+				- note: don't forget to explain the purpose of your project
+					- for example:
+						- introduce project
+							- show off api used
+						- ERD
+							- talk about multiplicity/normalization
+						- Product backlog + story points
+						- git flow
+						- front end skeleton
+						- anything you feel proud about
+				- opportunity for other groups to ask questions or propose considerations
+	- Sprint Retrospective
+		- every friday (12/10, 12/17)
+			- After review, in your groups review how the week went
+	- p2 showcase (monday 12/27)
+		- maybe we'll have visitors 
+
+
+Resources for Spring
+	- Spring Docs: 
+		- https://spring.io/projects/spring-framework
+	- Baeldung
+
+Spring
+	- Framework that leverages Inversion of Control (IoC) and Dependency Injection (DI) in order to accelerate software development	
+	- in general, "Spring" refers to the Spring Framework
+	- Spring modules
+		- different "features" within the Spring framework, usually address a specific concern within an application
+			- https://docs.spring.io/spring-framework/docs/5.0.0.M5/spring-framework-reference/html/overview.html
+			- SpringCore (IoC Container)
+			- SpringBeans
+			- SpringContext
+			- SpringWebMVC
+			- SpringAOP
+			- SpringORM
+	- Spring projects
+		- address different industry concerns(ie: Security, Microservice Architecture, Rapid development)
+			- https://spring.io/projects
+			- SpringSecurity
+			- SpringCloud
+			- SpringBoot
+			- SpringData
+	- IoC container
+		- Spring container
+		- responsible for instantiating our dependencies and providing them to our code
+	- Spring Bean
+		- Any Java entity that is managed by the IoC container
+		- their dependencies are also managed and provided by Spring
+	- Dependency Injection (DP)
+		- "dependency"
+			- object/entity needed for our code to work properly
+		- "injection"
+			- framework provides the instances of these objects for us
+
+IoC Container
+	- "inversion of control" - Spring manages the lifecycle of Spring Beans
+	- Once the beans and the dependencies have been specified, the IoC container manages them
+		- creates the bean(we don't have to use the 'new' keyword to retrieve an instance)
+		- handles dependency injection(if our object needs another Spring Bean, the IoC container will inject it for us)
+	- represented by the BeanFactory(BF) and the ApplicationContext(AC)
+		- leverage the Factory design pattern to create beans
+		- BF is the older version of the IoC container
+			- lazy instantiation
+		- AC is the newer version of the IoC container
+			- has all of the functionality of the BF and more
+			- eager instantiation
+	- Some important AC implementations
+		- ClassPathXMLApplicationContext
+		- AnnotationConfigApplicationContext
+		- WebApplicationContext
+	- Bean life cycle
+		- managed by the IoC container
+			- steps for the initialization/destruction of a bean
+		- https://howtodoinjava.com/wp-content/uploads/Spring-bean-life-cycle.png
+
+Dependency injection
+	- IoC container finds the appropriate bean requested as a dependency and injects it
+	- 4 different types of DI, Spring only supports 3:
+		- field injection - dependency is placed/injected directly into the field/property itself
+		- setter injection - dependency is placed/injected via the setter
+		- constructor injection - dependency is placed/injected using a constructor with fields
+			- also used in Angular!
+			- best practice
+		- interface injection - not supported by Spring
+
+Bean definition in XML
+	- root tag of the xml file should be "beans"
+	- beans are mapped using the "bean" tag
+		- example:
+			- <bean name="department" class="com.revature.models.Department"></bean>
+	- add a static value to a bean:
+		- <property name="id" value="12"></property>
+	- map to other beans
+		- <property name="department" ref="department"></property>
+
+Bean Wiring
+	- refers to establishing dependencies between Spring beans
+	- either XML or annotation based
+		- @Autowired 
+			- used to tell Spring that an object is a dependency
+			- Dependency Injection type is defined based on where it's found
+				- ie: on top of Constructor defines Constructor Injection
+			- byName/Type
+			- Automagically
+				- let Spring figure it out
+
+Scopes of a bean
+	- Singleton: only one of this bean is created, all request for this bean gets the same one
+	- Prototype: everytime this bean is requested, all requests get a new one
+	- Request: web-based, new bean is created per HTTP Request
+	- Session: web-based, new bean is created per HTTP Session
+	- Global: web-based, new bean is created per Global HTTP Session
+	
+Stereotype Annotations
+	- refers to annotations used for beans that the IoC should manage
+		- 4 main types
+			- @Component: standard, managed bean. Other annotations include this annotation implicitely
+			- @Service: denotes a service
+			- @Controller: denotes a controller, can also be used in conjunction to SpringWeb to handle HTTP requests/responses
+			- @Repository: denotes a repository/dao, bean to retrieve data from a database can be used with SpringData
+
+@Bean
+	- Annotation that goes over a METHOD to specify that the returned object will be managed by Spring
+		- good for object that have a class that we didn't write
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

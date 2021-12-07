@@ -14,3 +14,26 @@ Monday plan -
 
 	- Kevin Meeting 12-12:30pm ET
 
+Karma 
+	- Webserver/TestRunner
+		- Configured in the karma.conf.js
+	- looks for .spec.ts files to run their tests and display the results in a browser
+
+Jasmine
+	-BDD(Behavior-Driven development) unit testing framework
+		- Subset of TDD
+			- test cases written to specify the desired behavior
+	- It should be described in a highlevel language, kind of like english
+	- built-into Angular
+	- Main keywords/setup
+		- describe
+			- describes the name of the test suite (what is tested)
+		- it
+			- describes the desired functionality
+		- expect
+			- equivalent to an assert in JUnit
+		- beforeeach...
+
+	
+Jasmine Documentation: https://jasmine.github.io/api/3.10/global.html#expect
+
