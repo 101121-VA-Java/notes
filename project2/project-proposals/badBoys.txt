@@ -20,3 +20,11 @@ Admin
 - approve submitted user smoothies
 - add new ingredients 
 
+This is the api that we would probably use but we also have a few that we might try underneath. 
+https://www.fruityvice.com/
+
+
+
+https://api.spoonacular.com/food/ingredients/fruits
+https://developer.yummly.com/documentation.html
+https://www.halfyourplate.ca/fruits-and-veggies/fruits-a-z/
