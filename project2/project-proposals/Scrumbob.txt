@@ -10,26 +10,53 @@ Team Lead/ Scrum Master: David
 Project Idea: Odds of winning a Card Game.
 
 User Stories:
-	
-Users can have a betting balance
-Users can log in 
-Users can see the odds of winning at any stage of the game
-Users can create a profile with a preferred game
-Users can select the game
-Users can enter specific cards in their hand or randomly dealt
-Users can customize other player's hands in the game
-Dealer can see their odds at any stage of the game
-Dealer can abide by all dealer rules during the game
-Dealer can reshuffle the cards at the end of the game
-Texas Hold em: Users can input the river, flop, and turn cards. 
-User can view chart to see their odds.
+
+Users can log in/log out (1 pt)
+Users can see the odds of winning at any stage of the game (2 pt)
+Users can create a profile with a win/loss history (1 pt)
+User can see a random hand and associated odds (2 pt)
+User can choose specific cards to have in their hand (1 pt)
+Users can customize other player's hands in the game (2 pt)
+User can see Dealer's odds at winning at any stage of the game (1 pt)
+User can store information about wins or losses in their profile (2 pt)
+User can view chart to see their odds. (2 pt)
+Users can have a betting balance to track if they're "up" or "down" (2 pt)
+Users can select how many players at the table (2 pt)
+User can start a game (1 pt)
+System can recommend to "hit" or "stay" to a user (2 pt)
+User can split their hand (2 pt)
+ADMIN can view all history and all user information besides passwords. (1 pt)
+
+User roles: USER, ADMIN 
+DB: User, History
+
 
 API checked on Postman to check deck creator:
 https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1
 
 
+ERD:
 
+USER TABLE
 
+UserID | Primary Key int
+First name | varchar (30) not null
+Last name | varchar (50) not null
+Password | varchar (20) not null
+Email | varchar (80) unique
+Role | varchar (20) not null
+Won | int
+Lost | int
 
+HISTORY TABLE
+Game_id | Primary Key
+Player_Id | references UserID
+Winner | Boolean (True if Win/False if Lose)
+Initial odds of winning | float
+Balance | float 
+Initial Hand | Varchar (50)
+Recommendation | Varchar(20)
+FollowedRec | boolean
+NumOfDecks | int
 
 
