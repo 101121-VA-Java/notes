@@ -1,0 +1,42 @@
+Team names + Team lead (team lead will act as scrum master for the team and run standups) + a team member responsible for managing gitflow (this can be the team lead or another team member)
+Topic proposal with 10-15 user stories (Topic should demonstrate multiple user roles and leverages other APIs like Google Maps, Spotify, et cetera…)
+Each team must create a document in the Project 2 Proposals Folder with this information and review it with a trainer before moving forward.
+
+Team Members: Jason, Sam, Kendrick, Hannah
+Team Name: CodersAnonymous
+Team Lead/ Scrum Master: Sam
+
+
+Project Idea: Crypto buy, sell, exchange
+
+User Stories:
+	
+New Users can make an account, adding an optional email to your account makes you a VIP member
+Users can login
+2 types of users: Basic User and VIP User that will take them to their respective available options within the app
+Basic User: can view current cryptocurrency exchange rates on BitCoin
+Basic User: view USD remaining in account, start with $1,000
+Basic User: view Bitcoin owned and how much it is valued at in USD (STRETCH GOAL: chart graph that shows trend of their investments)
+Basic User: Purchase Bitcoin with their remaining account balance
+Basic User: Sell Bitcoin and have that transfer back to account balance in USD
+Basic User: View top “richest” Bitcoin accounts on the app
+VIP User: can do everything a Basic User can do, but account balance starts at $25,000
+VIP User: can also view value of Ethereum in USD
+VIP User: can purchase Ethereum with the USD in their account
+VIP User: can sell Ethereum and have the money returned to USD in their account. 
+
+API checked on Postman to check current Bitcoin:
+https://api.cryptapi.io/btc/info/
+
+API checked on Postman to check current Ethereum:
+https://api.cryptapi.io/eth/info/
+
+
+
+DB: USD, BTC, ETH, USERS
+
+API:
+Get: account balance
+Post: Add user
+Put : Add bitcoin   
+Put: sell bitcoin 

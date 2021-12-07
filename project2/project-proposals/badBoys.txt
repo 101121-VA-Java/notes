@@ -1,0 +1,30 @@
+Our team name is B.A.D.Boys our team lead is Brayden our gitflow maintenance will be done by Alex.
+ 
+We want to make an application called blender buddies that allows the user to input a bunch of fruits/other ingredients into smoothie and return the nutritional values of that smoothie. It would also display some recommendations of smoothies that the user might like based on the ingredients used to make thier first smoothie. 
+
+Users
+- log in
+- log out
+- submit recipes 
+- submit smoothie to be added to public list
+- view past selected smoothies
+- add requests for new ingredients 
+- make new personal smoothies
+- save favorite smoothies 
+- select provided smoothies
+
+Admin
+- log in 
+- log out 
+- adds smoothies to list 
+- approve submitted user smoothies
+- add new ingredients 
+
+This is the api that we would probably use but we also have a few that we might try underneath. 
+https://www.fruityvice.com/
+
+
+
+https://api.spoonacular.com/food/ingredients/fruits
+https://developer.yummly.com/documentation.html
+https://www.halfyourplate.ca/fruits-and-veggies/fruits-a-z/
