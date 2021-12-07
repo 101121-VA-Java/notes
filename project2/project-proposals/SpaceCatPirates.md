@@ -1,4 +1,6 @@
 Space cat pirates Project proposal
+Scrum Master: Dean Long
+Team:Dean, Albert, Patience, Bezza
  
 Space cat will create an application where users can view art items provisioned from the metropolitan art api and place them up for auction for users to bid on. Users will be able to login and update their demographic information and reset their security information. They will also be able to view their bid history. Auctioneers will be able to create auctions using the items provided by the api. They will be able to see bid history by user or by item. They will be able to update their demographic information.
 
