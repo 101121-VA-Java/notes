@@ -1,0 +1,160 @@
+Install Spring Tools 4 on Eclipse
+	- help -> Eclipse Marketplace
+	- in Find look for Spring Tools 4
+	- Install
+	- Reload Eclipse
+
+To add Bootdashboard
+	- window -> show view -> other
+	- look for Boot Dashboard
+
+Spring Boot
+	- Spring Project
+		- built upon different Spring modules within the Spring Framework
+	- makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+	- takes an opinionated view of the Spring platform and third-party libraries. 
+		- Requires need minimal Spring configuration.
+	- Can create Spring boot application via the Spring initializr
+		- https://start.spring.io/
+	- imbedded Tomcat server
+		- previously had to package Servlet Applications into a .war(web archive) to be deployed on a web server(ie: Tomcat)
+			- if using legacy spring applications, would have to deploy it manually
+		- now Tomcat is embedder, can just "run" the application
+			- .jar packaging
+	- "Convention over configuration"
+		- reduces the number of configuration by assuming common conventions
+			- ie: web server runs on port 8080
+		- can provide custom configuration in application.yml/.properties
+			- no more xml configuration
+			- ie: providing db credentials/overriding convention
+	- Set up
+		- class with a main method
+			- needs to be in the parent package/base package of the application
+				- otherwise component scan may not find relevant beans
+		- @SpringBootApplication
+			- abstration of 3 annotations
+				- @Configuration
+				- @EnableAutoConfiguration
+				- @ComponentScan
+ 		- in the main method SpringApplication.run([application-name].class, args);
+	- DevTools
+		- set of tools to ease application development
+			- automatic server restart
+			- live reloading of the ApplicationContext
+			- ... more
+	- Actuator
+		- information about the application using certain endpoints
+			- metrics(traffic.. state of app)
+			- bean info
+			- health checks
+		- production-ready features of the application
+
+Spring Web MVC
+	- Spring Module
+		- Spring Web
+	- Allows us to handle HTTP requests for Spring applications
+	- abstracted away
+		- leverages a FrontController design pattern
+			- DispatcherServlet
+		- only need to provide implementation of controller methods and mapping
+			- xml configuration is handled for you
+	- Controllers
+		- have methods used to handle requests for a particular path/http method
+		- can return
+			- data (ie: JSON) 
+			- views/static resources
+	- Flow of a request
+		- client makes a request
+		- request is received by Tomcat
+			- converts HTTP request to HttpServletRequest and generate HttpServletResponse
+		- checks the web.xml
+			- xml file used to map Servlets to endpoints
+				- ie: /reimbursements go to ReimbursementServlet
+			- only has ServletDispatcher(FC)
+				- ie: /* meaning all requests are routed to this one servlet
+		- routes to the ServletDispatcher
+		- checks the HandlerMapper
+			- contains information about the different controllers (ie: endpoints)
+		- sent to relevant controller/view resolver if a static webpage is requested
+ 
+	- traditionally, have to configure ServletDispatcher, ViewResolver as beans to be managed by the AC
+		- SpringBoot abstracts that away from us using conventions
+	
+MVC Annotations
+	- @Controller
+		- stereotype annotation to denote a controller class to be managed by AC
+		- can be leveraged alongside @RequestMapping to specify a common path for all controller methods
+		- used to handle HTTP Requests
+	- @RestController
+		- implicitely adds @ResponseBody to all methods
+			- indicates for a response body to be sent back instead of a view
+			- by passes the ViewResolver
+	- @RequestMapping(Mapping, HttpMethod)
+		- used to specify an HTTP verb and a url mapping for a method to handle
+		- by default, methods go through the ViewResolver unless @ResponseBody is specified
+	- @GetMapping/@PostMapping...
+		- specifying the HTTP verb for a method(@RequestMapping(for method x))
+		- ways to retrieve information from a request
+			- path-params(/users/{id})
+				- @PathVariable
+					- used to retrieve a variable from the url 
+			- query-params(/users?role=[value])
+				- @RequestParam
+					- used to retrieve query params
+			- request body
+				- @RequestBody
+					- used to map a JSON object to a JavaObject implicitely to be used in the method
+
+ResponseEntity
+	- Class to provide more granular control over return HTTP response
+		- ie: specify a status code
+
+GlobalException Handling
+	- allows to handle all exception occuring server side and returning relevant status codes within a single a class
+	- annotate class with @ControllerAdvice
+	- annotate methods with @ExceptionHandler(exceptionName.class)
+	- specify status code using @ResponseStatus([status], reason)
+
+RestTemplate
+	- Spring's traditional way to make HTTP calls from your server
+		- WebClient is more recent and async
+	- why make http call from backend?
+		- some APIs require API keys 
+			- making front end might expose key to end user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
