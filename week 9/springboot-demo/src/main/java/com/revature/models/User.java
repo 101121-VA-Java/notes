@@ -1,11 +1,24 @@
 package com.revature.models;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
+import org.hibernate.validator.constraints.Length;
+
+//@Component
+@Entity
+@Table(name="users")
 public class User {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	@Length(min=1)
+	@Column(nullable=false)
 	private String name;
 	private Role role;
 	

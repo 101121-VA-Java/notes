@@ -1,0 +1,152 @@
+Spring Data JPA
+	- Spring Data is a Spring project used to address data persistence
+		- Spring Data JPA
+			- "a module" within that project provides standard implementations for common DAO methods
+				- no longer needs to implement methods
+			- Built upon Spring ORM (a module of the Spring Framework) which is built upon Hibernate, which is built upon JDBC
+		- Spring Data Hierarchy
+			- Repository (I)
+			- CrudRepository (I)
+			- PagingAndSortingRepository(I)
+			- JpaRepository (I)
+		- Custom methods
+			- https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
+		- use @Query annotation if trying to do custom behavior not provided by Spring Data
+	- Setup
+		- map models using JPA annotations
+			- @Entity
+			- @Id
+			- @OneToMany...
+		- create an interface
+			- @Repository
+			- extends JpaRepository<[EntityToBeManaged], [id]>
+		- provide database credentials in Application.yml
+Transaction Management
+	- not specific to Spring Data JPA
+	- @Transactional
+		- indicate that a method should be handled in the context of a Spring handled transaction
+		- properties to be overriden
+			- isolation
+				- specify the isolation level
+			- rollbackFor
+				- specify when to rollback the transaction
+					- ie: when an exception is thrown
+			- propagation
+				- how nested transactions are handled
+	- @Transactional(propagation=Propagation.[value])
+		- REQUIRED
+			- executes in the current transaction or creates one if one doesn't exist
+			- default value (?)
+		- NESTED
+			- executes in the current transaction, separated by a savepoint
+		- REQUIRES_NEW
+			- creates a new transaction
+				- commit/rollback independently from others
+		- MANDATORY
+			- must execute in an existing transaction otherwise throws an exception
+		- NEVER
+			- must execute non-transactionally otherwise thows an exception if a transaction is open
+		- SUPPORTED
+			- will execute in the scope of a transaction if there is one, otherwise runs non-transactionally
+		- NOT_SUPPORTED
+			- will execute non transactionally no matter what
+
+Validating incoming http requests
+	- bean validation
+		- allows for the validation of the data received by our controllers
+		- can annotate a bean's properties with constraints
+			- @Length
+			- @Min/Max
+			- @Positive/Negative
+			- @Pattern(regexp="")
+		- use in conjunction with @valid to annotate the @RequestBody parameter to be validated
+
+
+Lombok
+	- Code generation tool
+		- annotate your class to generate code
+			- @Setter
+			- @Getter
+			- ... 
+			- @Data
+				- includes setter/getter/no-args constructor/to string/ hashcode equal
+	- Setting up lombok with your IDE
+		- navigate to ~/.m2/repository/org/projectlombok/lombok/[lombok-version]
+		- run: java -jar lombok-[version].jar
+		- using installer, navigate to your ide location on your device
+		- click install/update
+		- restart ide
+
+SwaggerUI
+	- API documentation tool
+		- integrates well with SpringBoot (before 2.6.0)
+			- version matters
+	- setup:
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+	- In the driver:
+
+    @Bean
+    public Docket api() { 
+        return new Docket(DocumentationType.SWAGGER_2)  
+          .select()                                  
+          .apis(RequestHandlerSelectors.any())              
+          .paths(PathSelectors.any())                          
+          .build();                                           
+    }
+
+
+Set up h2 database
+	- import h2 dependency
+	- configure h2 in application.yml
+spring:
+  datasource: 
+    url: jdbc:h2:mem:mydb
+    username: user
+    password: pass
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+	
+
+	- can access h2 console
+		- like dbeaver for in memory db
+		- localhost:[port]/h2-console
+			- provide url, username, password
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+insert into users (name, role) values ('Lanny', 0);
+insert into users (name, role) values ('Amelia', 1);
+insert into users (name, role) values ('Wandis', 1);
+insert into users (name, role) values ('Odelia', 1);
+insert into users (name, role) values ('Thorvald', 1);
+insert into users (name, role) values ('Adan', 1);
+insert into users (name, role) values ('Kennedy', 0);
+insert into users (name, role) values ('Vale', 1);
+insert into users (name, role) values ('Rosabel', 1);
+insert into users (name, role) values ('Brion', 1);

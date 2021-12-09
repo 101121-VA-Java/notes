@@ -2,6 +2,8 @@ package com.revature.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -77,7 +79,7 @@ public class UserController {
 	}
 	
 	@PostMapping // @RequestMapping(method=RequestMethod.POST)
-	public ResponseEntity<String> createUser(@RequestBody User user){
+	public ResponseEntity<String> createUser(@Valid @RequestBody User user){
 		us.createUser(user);
 		return new ResponseEntity<>(user.getName() + " was created.", HttpStatus.CREATED);
 	}
