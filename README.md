@@ -74,3 +74,7 @@
 11/30
 -  QC - 2pm (Hibernate, HTTP, ReST, Javalin)
     
+---  
+     
+12/13
+-  QC - 4pm (Spring)
