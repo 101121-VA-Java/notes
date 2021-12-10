@@ -1,0 +1,14 @@
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  profiles:
+    active:
+    - "@profileActive@"
+
+# Actuator setting to display more metrics about the application
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
