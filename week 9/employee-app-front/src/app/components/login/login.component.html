@@ -1,0 +1,28 @@
+<div class="container align-content-center" id="loginForm">
+    <form style="padding-top: 2.5em;">
+        <div id="bottomBorder" class="form-row">
+            <h1 class="display-4 text-center">Login</h1>
+        </div>
+        <hr>
+        <br>
+        <div class="form-row  text-center">
+            <label>Username:</label>
+            <br>
+            <input class="inputstyle" type="text" name="username" #username>
+            <br>
+            <br>
+            <br>
+            <label>Password:</label>
+            <br>
+            <input class="inputstyle" type="password" name="password" #password>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input class="btn btn-outline-secondary" value="Login" (click)='login(username.value, password.value)'>
+            <br>
+            <br>
+            <div style="color:red;">{{message}}</div>
+        </div>
+    </form>
+</div>
