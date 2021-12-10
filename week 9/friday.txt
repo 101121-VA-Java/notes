@@ -1,0 +1,112 @@
+Spring profiles
+	- Allows use to use different versions of beans in diffenrent environment
+		- ie:
+			- dev - for development, testing, struggling, crying
+				- may just connect to an in memory database as a datasource
+			- prod - for end users
+				- actually connect to a production RDS
+	- Setup
+		- have, in application.yml:
+			- this sets the profile to whatever is defined by maven (pom.xml)
+spring:
+  profiles:
+    active:
+    - "@profileActive@"
+		- have application-dev.yml
+			- set dev environment
+				- ie: information to set up h2
+					- with data.sql file to insert records on start up
+		- have application-prod.yml
+			- set prod environment
+				- ie: info about prod RDS
+		- in pom.xml:
+			- define the prod and dev profiles and set 'dev' as default
+     <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <build.profile.id>dev</build.profile.id>
+                <profileActive>dev</profileActive>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <build.profile.id>prod</build.profile.id>
+                <profileActive>prod</profileActive>
+            </properties>
+        </profile>
+    </profiles>
+		- changing from dev to prod:
+			- while packaging, we can specify which environment to use for our artifact to be deployed:
+				- mvn package -Dmaven.test.skip -Pprod
+Exposing Headers to an Angular application
+	- use @CrossOrigin(exposedHeaders="[name of Header]")
+
+DTO
+	- data transfer objects
+		- objects without sensitive data to be transfered between webservices/to the front end
+
+Spring AOP
+	- Spring module, part of the Spring Framework
+	- Aspect Oriented Programming
+		- used to handle Cross Cutting Concerns(CCC) == Aspect
+			- Any logic not related to the business logic of the application
+			- Global concerns to be kept in mind
+				- ie:
+					- logging
+					- security
+					- validation
+			- Can be handled universally in order to decouple from the business logic
+				- separation of concern
+	- AspectJ
+		- annotation based framework to work with Aspects
+		- would have to enable aop in xml file if not using SpringBoot
+	- Terminology
+		- aspect
+			- a class annotated with @Aspect to address a specific CCC
+		- advice
+			- an entity that modifies the code
+				- code to be injected elsewhere
+			- Typically a method with the aspect class
+		- joinpoint
+			- any code that can be modified by an advice/that can be advised
+			- in the context of Spring, refers to any method in a Spring bean
+		- pointcut
+			- expression to target specific joinpoints
+			- @Pointcut()
+	- types of advices - indicates when the advice should be executed in relation to the execution of the method advised
+		- @Before: before the method executes
+		- @After: after the method executes
+		- @AfterReturning: after successful method execution
+		- @AfterThrowing: after an exception/error is thrown
+		- @Around:
+			- the most powerful type of advice
+			- happens before the method execution and can control if and when a method should be executed
+	- AOP
+		- leverages AOP proxies to implement the advices in the methods's execution
+			- ie: the advice are injected into the method, the proxy's methods has original method + advice and that method gets executed instead
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

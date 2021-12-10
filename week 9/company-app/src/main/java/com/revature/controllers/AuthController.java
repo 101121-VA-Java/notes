@@ -31,10 +31,12 @@ public class AuthController {
 		
 		String token = as.generateToken(principal);
 		
+		// setting headers to be returned to the front end
 		HttpHeaders hh = new HttpHeaders();
 		
 		hh.set("Authorization", token);
 		
+		// constructor for response entity(body, headers, status)
 		return new ResponseEntity<>(principal, hh, HttpStatus.OK);
 	}
 }

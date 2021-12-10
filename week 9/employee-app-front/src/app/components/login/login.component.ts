@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
     this.authService.authenticate(username, password).subscribe(
       (response) => {
-        console.log(response);
+        // navigates us back to the main page
         this.router.navigate(['']);
       },
       err => {

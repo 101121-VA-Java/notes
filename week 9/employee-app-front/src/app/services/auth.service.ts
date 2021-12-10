@@ -33,6 +33,7 @@ export class AuthService {
         this.currentUser = response.body as Principal;
         // retrieves the token from the headers to be leveraged in future http requests
         this.token = response.headers.get('Authorization') || '';
+        console.log(this.token);
       }
       )
     );

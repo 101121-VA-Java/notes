@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${DB_URL} #can hardcode credentials, but better practice to use environment variables to not expose creds
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate

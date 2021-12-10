@@ -24,6 +24,7 @@ public class Task {
 	@Column(nullable=false)
 	private String name;
 	private String description;
+	// assigns the current localdatetime when a record is inserted
 	@Column(name="assigned_date", updatable=false, columnDefinition="timestamp default CURRENT_TIMESTAMP")
 	private LocalDateTime assignedDate;
 	private LocalDateTime dueDate;

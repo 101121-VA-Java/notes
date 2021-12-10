@@ -23,6 +23,7 @@ public class Employee {
 	private String username;
 	@Column(nullable=false)
 	private String password;
+	// Says to store the value of the string rather than a number
 	@Enumerated(EnumType.STRING)
 	private Role role;
 	

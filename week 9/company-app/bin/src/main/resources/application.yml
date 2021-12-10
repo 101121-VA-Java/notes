@@ -1,4 +1,3 @@
-# prevents empty bean retrieval from causing issues
 spring:
   jackson:
     serialization:

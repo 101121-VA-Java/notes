@@ -20,6 +20,7 @@ public class AuthService {
 	
 	public Principal login(String username, String password) {
 		Employee e = er.findEmployeeByUsername(username);
+		// authentication logic: does the password match what is in the database/ is the user present in the database
 		if(e == null || !e.getPassword().equals(password)) {
 			throw new LoginException();
 		}
