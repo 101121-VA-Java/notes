@@ -1,0 +1,15 @@
+Monday plan
+	- QC surveys
+	- Portfolios
+		- due date 12/17 (?)
+		- p1 can be added to your portfolios
+	- Quiz
+		- before 1pm
+	- QC 4pm (ET) - Spring topics
+	- Interview practice
+		- ~5 questions each
+			- emphasis on using proper terminology
+		- As a team push a completed version of the study guide to your group's folder
+	- P2 time
+	- Docker installation
+		- check RevPro for install guide
