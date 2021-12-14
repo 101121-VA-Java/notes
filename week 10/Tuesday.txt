@@ -1,0 +1,92 @@
+Manual deployment
+	- set up an EC2 and expose endpoints
+		- set up memory and processing power
+	- ssh -i [path]/[to]/[pemfile] ec2-user@[ip-address of ec2]
+	
+	- sudo yum update -y
+	
+	- sudo yum install java-1.8.0-openjdk-devel -y
+	- sudo yum install git -y
+	-- install maven
+
+	- git clone [repository].git
+	
+	- cd into repository
+	
+	- mvn package
+		- generates an artifact (.jar file)
+	
+	- java -jar [artifact-name].jar
+
+Docker
+	- Tool revolving around the idea of containerization
+		- used to develop and deploy applications using containers
+	- supported on linux
+		- requires Toolbox to be run on Windows
+	- follows a client-server architecture
+		- docker cli/daemon
+
+Containers
+	- standard unit of software
+	- Abstraction at the app layer that packages code and dependencies together
+		- multiple containers can be ran on the same Docker engine and share the same host OS with one another
+			- each container runs as an isolated process (namespaces)
+			- lightweight therefore more scalable
+				- runs on the host OS while a VM usually requires its own OS
+				- provides a more efficient use of resources
+
+
+Terminology
+	- Docker Client
+		- CommandLine tool to interact with the Docker Daemon
+	- Docker Daemon
+		- background service running on top of the OS to manage/build/run Docker containers
+	- Dockerfile
+		- simple text file that contains a list of commands to create a docker image
+			- note: a dockerfile does not have a file extension
+	- Docker Image
+		- template/blueprint of an application to create containers
+		- include everything needed to run an application, code, runtime environment, dependencies...
+	- Docker Container
+		- running process, isolated from the host and from one another
+		- each container will interact with its own private filesystem provided by the docker image
+	- Docker Volume
+		- preferred way for persisting and sharing data between Docker containers
+	- Docker Hub
+		- online registry and version control system for docker images
+			- docker pull
+			- docker push
+
+Dockerfile
+	- FROM [base-image]
+		- specifies an image to be built up/ usually going to be the runtime environment for an application
+		- at the top of the dockerfile
+	- COPY [host filesystem] [container filesystem]
+		- used to copy files into the container's filesystem
+			- ie: artifact to be ran
+	- ENTRYPOINT
+		- can be used to specify the entry point of the application
+	- ADD [url]
+		- add a file to be retrieved online
+	- ENV
+		- used to specify environment variables
+	- CMD/RUN
+		- used to run commands in the containers
+			- sudo yum update...
+	- EXPOSE
+		- specifies which port to expose for the container
+
+Docker Workflow
+	- Dockerfile -> docker build -t [image-name] . (to specify where) -> Docker Image -> docker run -e [name-of-env]=[value-of-env] -p [HostPort]:[ContainerPort] -d (run in detached mode, ie: still be able to use the console) [image-name] -> Docker Container
+
+Basic Docker Commands
+	- docker 
+		- displays a list of available commands
+	- docker images
+		- displays available images
+	- docker ps
+		- displays running containers
+	- docker build
+	- docker run
+	- docker stop
+		- stop a container
