@@ -43,9 +43,9 @@ Go to:your-ec2-dns.amazonaws.com:8080
 Jenkins' initial password can be retrieved from the EC2 using: 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
---> login using master password
 --> install recommended plugins
 --> setup admin user
+--> login using master password
 
 ------- Create Job -------
 
