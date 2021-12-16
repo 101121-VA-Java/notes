@@ -1,0 +1,43 @@
+SonarCloud
+	- cloud-based code analysis to detect code quality issues to provide maintainability, reliability, and security to the codebase
+	- provides static code analysis to detect
+		- code smells
+			- do not prevent code from functioning
+			- can make code less maintainable
+		- bugs
+			- errors in code that can prevent the program from operating as intended
+		- vulnerabilities
+			- problems in the code that could be exploited to compromise the security of the application
+
+Setting up Sonar cloud for your back-end repository
+	- Create new organization/analyze new project
+		- (might need admin approval from me)
+	- Select repository
+	- set up
+	- Select GitHub Actions for Analysis method
+		- follow instructions
+			- GitHub Secret
+			- .github/workflows/build.yml
+				- select maven
+					- in the build.yml file, update the branch name from master to the branch you'd like to analyze
+					- on:
+					    push:
+					      branches:
+						- [branch-name]
+	- if you're using Spring profiles, update the Jenkinsfile 'package' stage from 
+
+      stage('package') {
+         steps {
+            sh 'mvn package -Dmaven.test.skip=true
+         }
+      }
+
+	- to
+
+      stage('package') {
+         steps {
+            sh 'mvn package -Dmaven.test.skip=true -Pprod'
+         }
+      }
+
+	- in order to run the prod profile instead of dev
