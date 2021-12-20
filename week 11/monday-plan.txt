@@ -1,0 +1,51 @@
+Monday plan
+	- 10-10:15am
+		- QC Survey
+	- Intro to MSA
+	- 2pm: QC (Java/SQL)
+	- After QC: Project time.
+
+Scaling
+	- Vertical Scaling
+		- provide more power/resources to an application
+	- Horizontal Scaling
+		- provide more instances of an application
+
+Microservice Architecture (MSA)
+	- breaking down monolithic applications into smaller independent services
+		- promoting decoupling
+	- Monolith vs MSA
+		- Monolith
+			- System simplicity
+			- More centralized control
+			- Less Network Traffic
+			- ACID transactions
+		- MSA
+			- More efficient resource allocation and scalability
+				- scale a specific aspect of the application rather than the whole
+			- modularity
+				- decoupling
+				- easy to upgrade/ replace
+				- no longer tied to a particular tech stack
+					- if all services are Restful, tech stack no longer matters
+			- databases
+				- MSA might have dbs for each of their services
+					- multiple databases might need to be updated by a single request
+					- lack of transactional operation (ACID)
+						- Basic Availability, Softstate, eventual Consitency
+							- BASE
+			- Higher fault tolerance
+				- if one instance goes down, does not break the whole application
+			- Complex architecture
+				- a lot more overhead
+			- Chatty interfaces
+				- a lot of interservice communication over a network
+
+Spring Cloud
+	- Spring project, designed to address "issues" related to MSA
+		- provides implementation for design patterns solving these issues
+			- Service Discovery/Registration
+			- API Gateway
+			- Circuit Breaking
+			- Load Balancing
+			- Central Config
