@@ -1,0 +1,54 @@
+API Gateway/ Gateway Service
+	- acts as a "gateway" to route and filter all incoming requests
+		- b/c all requests go through the gateway, ideal location to apply auth filters...
+	- routing
+		- sending the incoming requests to their relevant services based on the url, ie: 
+			- some-url.com/quiz -> route to quiz-service
+			- some-url.com/flashcard -> route to flashcard-service
+		- specified in property file
+	- implementations
+		- Zuul - from the netflix stack
+		- Spring Cloud Gateway - abstraction of Zuul
+
+Service Discovery
+	- services communicate with one another constantly, one the challenges is to keep track of the location of those services as they are instantiated and taken down
+	- Service Discovery allows for the service to locate one another using the service registry
+		- list of available services and their location
+		- keeps track of whether or not service registered are up and running
+			- leverages a heartbeat ( sends a ping and expects ping back )
+		- services within our application register to this registry
+	- Implementation
+		- Eureka - from Netflix
+		- Consul
+			- provide secure service to service communication for us
+			- accessible via download or docker
+				- docker run -d --name consul -p 8500:8500 consul
+			- by default runs on port 8500
+			- services can register to consul via the @EnableDiscoveryClient annotation aboce the main class of their application
+
+
+LoadBalancing
+	- spliting the requests between available instances of the services
+		- Client-side load balancer (Ribbon)
+			- in this case client-side means the service making the request
+		- Server-side load balancer (API gateway)
+	
+Feign Client
+	- Declarative web client, makes it easier to make requests between services
+	- setup
+		- import openfeign dependency
+		- @EnableFeignClients(above the main method class)
+		- create interface with @FeignClient(name="service-name")
+		- list the methods to be used with the relevant mappings
+
+Circuit Breaking
+	- Providing methods for failing gracefully in case a service is unavailable
+	- Circuit Breaker design pattern
+		- Closed - works as intended
+		- Open - service is unavailable, use fallback
+		- Half-closed - testing requests to see if a service back up
+	- Implementation
+		- Resilience4j
+			- imported dependency
+			- define a fallback method/behavior
+			- @CircuitBreaker annotation above method making request to another service
