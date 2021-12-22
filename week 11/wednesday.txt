@@ -1,0 +1,22 @@
+Centralized Configuration
+	- Configuration Server to store all of our services' config
+		- keep track of all of the configurations in a repository (ie: GitHub)
+			- easy to maintain and reuse	
+	- Spring Cloud Config
+	
+Kafka
+	- Messaging service/ messaging queue
+	- Design patterns:
+		- Publisher/Subscriber
+		- Producer/Consumer
+	- when service is unavailable, messages sent to that service can be preserved in a queue to be consumed once the service is back up
+	- for eventual consistency, when a record is created makes sure that all relevant services also have that record
+	- Broker
+		- log of messaging
+		- maintain topics
+			- subset of data
+				- records
+					- data added to the queue to be consumed
+					- written into topics, ordered with an id
+	- not a 1-to-1 relationship
+		- can have multiple producers/consumers for the same queue
